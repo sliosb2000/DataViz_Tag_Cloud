@@ -1,5 +1,5 @@
 import csv
-from distutils.command.install import key
+#from distutils.command.install import key
 
 with open('input.txt', 'r') as info_file:
     dic = dict()
@@ -11,8 +11,8 @@ with open('input.txt', 'r') as info_file:
 
         for w in dic:
             dic[w] = dic[w] + 1
-        else:
-            dic[word] = 1
+#        else:
+#           dic[w] = 1
 
     for word in list(dic.keys()):
         print(key, " ", dic[key])
