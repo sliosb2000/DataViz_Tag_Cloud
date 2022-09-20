@@ -11,8 +11,9 @@ with open('input.txt', 'r') as info_file:
 
         for w in dic:
             dic[w] = dic[w] + 1
-#        else:
-#           dic[w] = 1
+       else:
+           dic[w] = 1
 
     for word in list(dic.keys()):
-        print(key, " ", dic[key])
+        # print(key, " ", dic[key])
+        pass
