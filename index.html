@@ -3,13 +3,205 @@
     <style>
     text:focus,text:hover {
         font-weight: bold;
+        font-style: italic;
     }
     </style>
     </head>
     <body>
     <text>Hover Over Me</text>
-    <img src="cloud.svg"/>
-    <p>the cloud is imported as a img file</p>
-    <p>we need to place the raw svg data somehow</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+        <style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,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")format("woff");}</style>
+        <style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
+        <rect width="100%" height="100%" style="fill:white"></rect>
+        <text transform="translate(69,94)" font-size="40" style="fill:rgb(69, 55, 129)">Don Quixote</text>
+        <text transform="translate(119,25)" font-size="33" style="fill:rgb(68, 57, 131)">one</text>
+        <text transform="translate(194,168)" font-size="31" style="fill:rgb(63, 72, 137)">will</text>
+        <text transform="translate(333,182) rotate(-90)" font-size="30" style="fill:rgb(72, 193, 110)">said</text>
+        <text transform="translate(343,18)" font-size="26" style="fill:rgb(60, 79, 138)">say</text>
+        <text transform="translate(63,180)" font-size="26" style="fill:rgb(46, 109, 142)">Sancho</text>
+        <text transform="translate(233,54)" font-size="24" style="fill:rgb(70, 11, 94)">s</text>
+        <text transform="translate(139,47)" font-size="23" style="fill:rgb(72, 33, 115)">now</text>
+        <text transform="translate(8,20)" font-size="23" style="fill:rgb(234, 229, 26)">may</text>
+        <text transform="translate(132,149)" font-size="22" style="fill:rgb(70, 50, 126)">know</text>
+        <text transform="translate(227,124)" font-size="22" style="fill:rgb(66, 65, 134)">come</text>
+        <text transform="translate(192,19)" font-size="22" style="fill:rgb(71, 17, 100)">see</text>
+        <text transform="translate(340,117)" font-size="22" style="fill:rgb(223, 227, 24)">time</text>
+        <text transform="translate(9,153)" font-size="22" style="fill:rgb(62, 76, 138)">well</text>
+        <text transform="translate(329,69)" font-size="22" style="fill:rgb(69, 5, 89)">made</text>
+        <text transform="translate(305,196) rotate(-90)" font-size="22" style="fill:rgb(41, 122, 142)">make</text>
+        <text transform="translate(333,135)" font-size="22" style="fill:rgb(38, 129, 142)">thee</text>
+        <text transform="translate(280,28)" font-size="22" style="fill:rgb(61, 188, 116)">good</text>
+        <text transform="translate(297,46)" font-size="22" style="fill:rgb(112, 207, 87)">without</text>
+        <text transform="translate(186,188)" font-size="21" style="fill:rgb(57, 86, 140)">great</text>
+        <text transform="translate(182,59)" font-size="20" style="fill:rgb(31, 154, 138)">let</text>
+        <text transform="translate(98,113)" font-size="20" style="fill:rgb(31, 151, 139)">though</text>
+        <text transform="translate(13,60)" font-size="20" style="fill:rgb(62, 73, 137)">upon</text>
+        <text transform="translate(266,38) rotate(-90)" font-size="20" style="fill:rgb(72, 29, 111)">thy</text>
+        <text transform="translate(50,112)" font-size="20" style="fill:rgb(76, 194, 108)">way</text>
+        <text transform="translate(92,46)" font-size="20" style="fill:rgb(92, 200, 99)">u</text>
+        <text transform="translate(81,56) rotate(-90)" font-size="20" style="fill:rgb(69, 5, 89)">give</text>
+        <text transform="translate(22,129)" font-size="20" style="fill:rgb(72, 35, 116)">hand</text>
+        <text transform="translate(27,195)" font-size="19" style="fill:rgb(96, 202, 96)">said Don</text>
+        <text transform="translate(1,99)" font-size="19" style="fill:rgb(68, 2, 86)">go</text>
+        <text transform="translate(281,196) rotate(-90)" font-size="19" style="fill:rgb(67, 62, 133)">master</text>
+        <text transform="translate(350,93)" font-size="19" style="fill:rgb(44, 114, 142)">take</text>
+        <text transform="translate(213,107)" font-size="17" style="fill:rgb(119, 209, 83)">said Sancho</text>
+        <text transform="translate(62,142)" font-size="17" style="fill:rgb(46, 179, 124)">worship</text>
+        <text transform="translate(105,67)" font-size="17" style="fill:rgb(160, 218, 57)">word</text>
+        <text transform="translate(158,127)" font-size="17" style="fill:rgb(54, 93, 141)">knight</text>
+        <text transform="translate(79,157)" font-size="17" style="fill:rgb(58, 84, 140)">came</text>
+        <text transform="translate(29,73)" font-size="17" style="fill:rgb(181, 222, 43)">must</text>
+        <text transform="translate(347,177)" font-size="17" style="fill:rgb(53, 95, 141)">much</text>
+        <text transform="translate(216,32)" font-size="16" style="fill:rgb(144, 215, 67)">two</text>
+        <text transform="translate(348,154)" font-size="16" style="fill:rgb(33, 165, 133)">thing</text>
+        <text transform="translate(250,56)" font-size="16" style="fill:rgb(72, 27, 109)">day</text>
+        <text transform="translate(12,170)" font-size="16" style="fill:rgb(149, 216, 64)">might</text>
+        <text transform="translate(218,140)" font-size="16" style="fill:rgb(157, 217, 59)">world</text>
+        <text transform="translate(27,89)" font-size="16" style="fill:rgb(80, 196, 106)">life</text>
+        <text transform="translate(339,188)" font-size="15" style="fill:rgb(71, 19, 101)">many</text>
+        <text transform="translate(12,44)" font-size="15" style="fill:rgb(80, 196, 106)">tell</text>
+        <text transform="translate(292,54)" font-size="15" style="fill:rgb(197, 224, 33)">man</text>
+        <text transform="translate(61,41) rotate(-90)" font-size="15" style="fill:rgb(37, 131, 142)">love</text>
+        <text transform="translate(162,171)" font-size="15" style="fill:rgb(200, 224, 32)">God</text>
+        <text transform="translate(121,193)" font-size="15" style="fill:rgb(72, 40, 120)">heart</text>
+        <text transform="translate(87,125)" font-size="15" style="fill:rgb(31, 158, 137)">little</text>
+        <text transform="translate(161,92) rotate(-90)" font-size="15" style="fill:rgb(61, 77, 138)">found</text>
+        <text transform="translate(345,26)" font-size="15" style="fill:rgb(71, 17, 100)">saw</text>
+        <text transform="translate(99,32) rotate(-90)" font-size="15" style="fill:rgb(31, 151, 139)">put</text>
+        <text transform="translate(111,47) rotate(-90)" font-size="15" style="fill:rgb(176, 221, 47)">never</text>
+        <text transform="translate(230,65)" font-size="15" style="fill:rgb(72, 41, 121)">even</text>
+        <text transform="translate(279,123)" font-size="15" style="fill:rgb(31, 161, 136)">eye</text>
+        <text transform="translate(181,40)" font-size="15" style="fill:rgb(34, 141, 141)">left</text>
+        <text transform="translate(284,12)" font-size="14" style="fill:rgb(69, 56, 130)">book</text>
+        <text transform="translate(305,192)" font-size="14" style="fill:rgb(49, 104, 142)">lady</text>
+        <text transform="translate(334,162)" font-size="12" style="fill:rgb(44, 177, 126)">curate</text>
+        <text transform="translate(282,61)" font-size="10" style="fill:rgb(45, 178, 125)">another</text>
+        <text transform="translate(189,100)" font-size="10" style="fill:rgb(71, 44, 122)">arm</text>
+        <text transform="translate(12,107)" font-size="9" style="fill:rgb(55, 184, 120)">nothing</text>
+        <text transform="translate(193,147)" font-size="9" style="fill:rgb(44, 115, 142)">took</text>
+        <text transform="translate(139,156)" font-size="9" style="fill:rgb(50, 101, 142)">end</text>
+        <text transform="translate(200,67)" font-size="9" style="fill:rgb(47, 180, 124)">head</text>
+        <text transform="translate(1,83)" font-size="9" style="fill:rgb(70, 7, 90)">going</text>
+        <text transform="translate(376,186)" font-size="9" style="fill:rgb(59, 187, 117)">gave</text>
+        <text transform="translate(188,106)" font-size="9" style="fill:rgb(72, 38, 119)">name</text>
+        <text transform="translate(232,195)" font-size="9" style="fill:rgb(72, 40, 120)">heard</text>
+        <text transform="translate(4,194)" font-size="9" style="fill:rgb(70, 52, 128)">mean</text>
+        <text transform="translate(25,96)" font-size="9" style="fill:rgb(66, 65, 134)">first</text>
+        <text transform="translate(332,53)" font-size="9" style="fill:rgb(46, 110, 142)">went</text>
+        <text transform="translate(394,47) rotate(-90)" font-size="9" style="fill:rgb(70, 7, 90)">squire</text>
+        <text transform="translate(1,178)" font-size="9" style="fill:rgb(184, 222, 41)">truth</text>
+        <text transform="translate(111,32)" font-size="9" style="fill:rgb(33, 165, 133)">told</text>
+        <text transform="translate(165,182)" font-size="9" style="fill:rgb(49, 181, 123)">seen</text>
+        <text transform="translate(8,74) rotate(-90)" font-size="9" style="fill:rgb(223, 227, 24)">thought</text>
+        <text transform="translate(365,101)" font-size="9" style="fill:rgb(69, 5, 89)">mind</text>
+        <text transform="translate(90,53)" font-size="9" style="fill:rgb(69, 5, 89)">Full Size</text>
+        <text transform="translate(265,69)" font-size="9" style="fill:rgb(55, 90, 140)">leave</text>
+        <text transform="translate(4,27)" font-size="9" style="fill:rgb(84, 197, 104)">called</text>
+        <text transform="translate(336,75)" font-size="7" style="fill:rgb(74, 193, 109)">adventure</text>
+        <text transform="translate(78,162)" font-size="6" style="fill:rgb(46, 110, 142)">Sancho Panza</text>
+        <text transform="translate(178,24)" font-size="6" style="fill:rgb(44, 114, 142)">father</text>
+        <text transform="translate(341,194)" font-size="6" style="fill:rgb(46, 179, 124)">asked</text>
+        <text transform="translate(7,129) rotate(-90)" font-size="6" style="fill:rgb(42, 176, 127)">seeing</text>
+        <text transform="translate(233,163) rotate(-90)" font-size="6" style="fill:rgb(71, 44, 122)">find</text>
+        <text transform="translate(66,31) rotate(-90)" font-size="6" style="fill:rgb(186, 222, 40)">house</text>
+        <text transform="translate(302,68)" font-size="6" style="fill:rgb(33, 145, 140)">señor</text>
+        <text transform="translate(233,11)" font-size="6" style="fill:rgb(216, 226, 25)">look</text>
+        <text transform="translate(284,141)" font-size="6" style="fill:rgb(31, 149, 139)">friend</text>
+        <text transform="translate(159,155)" font-size="6" style="fill:rgb(122, 209, 81)">don t</text>
+        <text transform="translate(129,44) rotate(-90)" font-size="6" style="fill:rgb(34, 167, 133)">jpg</text>
+        <text transform="translate(391,81) rotate(-90)" font-size="6" style="fill:rgb(70, 48, 126)">saying</text>
+        <text transform="translate(282,132)" font-size="6" style="fill:rgb(64, 69, 136)">heaven</text>
+        <text transform="translate(150,30)" font-size="6" style="fill:rgb(69, 4, 87)">better</text>
+        <text transform="translate(186,136)" font-size="6" style="fill:rgb(68, 59, 132)">thou</text>
+        <text transform="translate(69,124)" font-size="6" style="fill:rgb(33, 166, 133)">done</text>
+        <text transform="translate(391,141) rotate(-90)" font-size="6" style="fill:rgb(72, 26, 108)">night</text>
+        <text transform="translate(166,52)" font-size="6" style="fill:rgb(59, 82, 139)">duke</text>
+        <text transform="translate(272,41)" font-size="6" style="fill:rgb(99, 203, 95)">long</text>
+        <text transform="translate(71,60)" font-size="6" style="fill:rgb(40, 124, 142)">present</text>
+        <text transform="translate(3,135)" font-size="6" style="fill:rgb(35, 138, 141)">duchess</text>
+        <text transform="translate(46,176)" font-size="6" style="fill:rgb(72, 32, 113)">mine</text>
+        <text transform="translate(139,133)" font-size="6" style="fill:rgb(71, 42, 122)">doubt</text>
+        <text transform="translate(202,195)" font-size="6" style="fill:rgb(72, 35, 116)">place</text>
+        <text transform="translate(170,110)" font-size="6" style="fill:rgb(46, 111, 142)">show</text>
+        <text transform="translate(58,147)" font-size="6" style="fill:rgb(46, 110, 142)">think</text>
+        <text transform="translate(331,93)" font-size="6" style="fill:rgb(253, 231, 37)">read</text>
+        <text transform="translate(160,133)" font-size="6" style="fill:rgb(71, 44, 122)">still</text>
+        <text transform="translate(135,161)" font-size="6" style="fill:rgb(194, 223, 35)">order</text>
+        <text transform="translate(1,184)" font-size="6" style="fill:rgb(71, 17, 100)">given</text>
+        <text transform="translate(62,153)" font-size="6" style="fill:rgb(208, 225, 28)">set</text>
+        <text transform="translate(216,37)" font-size="6" style="fill:rgb(72, 38, 119)">matter</text>
+        <text transform="translate(371,195)" font-size="6" style="fill:rgb(30, 156, 137)">beauty</text>
+        <text transform="translate(370,52)" font-size="6" style="fill:rgb(208, 225, 28)">village</text>
+        <text transform="translate(310,176) rotate(-90)" font-size="6" style="fill:rgb(60, 80, 139)">replied</text>
+        <text transform="translate(249,179)" font-size="6" style="fill:rgb(44, 177, 126)">away</text>
+        <text transform="translate(6,169) rotate(-90)" font-size="6" style="fill:rgb(72, 26, 108)">true</text>
+        <text transform="translate(51,44)" font-size="6" style="fill:rgb(41, 123, 142)">seem</text>
+        <text transform="translate(287,198) rotate(-90)" font-size="6" style="fill:rgb(37, 131, 142)">brought</text>
+        <text transform="translate(166,190)" font-size="6" style="fill:rgb(162, 218, 55)">soon</text>
+        <text transform="translate(143,99) rotate(-90)" font-size="6" style="fill:rgb(202, 225, 31)">thou art</text>
+        <text transform="translate(332,81)" font-size="6" style="fill:rgb(70, 192, 111)">sort</text>
+        <text transform="translate(318,6)" font-size="5" style="fill:rgb(35, 169, 131)">anything</text>
+        <text transform="translate(333,139)" font-size="5" style="fill:rgb(68, 58, 131)">right</text>
+        <text transform="translate(202,136)" font-size="5" style="fill:rgb(112, 207, 87)">call</text>
+        <text transform="translate(311,133) rotate(-90)" font-size="5" style="fill:rgb(59, 187, 117)">part</text>
+        <text transform="translate(27,179)" font-size="5" style="fill:rgb(66, 190, 113)">governor</text>
+        <text transform="translate(218,48)" font-size="5" style="fill:rgb(208, 225, 28)">began</text>
+        <text transform="translate(306,195)" font-size="5" style="fill:rgb(34, 140, 141)">answer</text>
+        <text transform="translate(265,150) rotate(-90)" font-size="5" style="fill:rgb(41, 121, 142)">men</text>
+        <text transform="translate(211,172)" font-size="5" style="fill:rgb(72, 40, 120)">barber</text>
+        <text transform="translate(247,152)" font-size="5" style="fill:rgb(176, 221, 47)">far</text>
+        <text transform="translate(233,18)" font-size="5" style="fill:rgb(44, 177, 126)">want</text>
+        <text transform="translate(396,127) rotate(-90)" font-size="5" style="fill:rgb(53, 183, 121)">Sancho said</text>
+        <text transform="translate(194,110)" font-size="5" style="fill:rgb(72, 38, 119)">letter</text>
+        <text transform="translate(332,14)" font-size="5" style="fill:rgb(160, 218, 57)">ass</text>
+        <text transform="translate(70,5)" font-size="5" style="fill:rgb(31, 149, 139)">others</text>
+        <text transform="translate(162,58)" font-size="5" style="fill:rgb(239, 229, 28)">keep</text>
+        <text transform="translate(214,89) rotate(-90)" font-size="5" style="fill:rgb(226, 228, 24)">whether</text>
+        <text transform="translate(278,111)" font-size="5" style="fill:rgb(37, 131, 142)">Rocinante</text>
+        <text transform="translate(51,95)" font-size="5" style="fill:rgb(44, 113, 142)">death</text>
+        <text transform="translate(266,26)" font-size="5" style="fill:rgb(51, 99, 141)">best</text>
+        <text transform="translate(73,128)" font-size="5" style="fill:rgb(59, 81, 139)">reason</text>
+        <text transform="translate(28,113)" font-size="5" style="fill:rgb(37, 171, 130)">enough</text>
+        <text transform="translate(326,98)" font-size="5" style="fill:rgb(46, 179, 124)">among</text>
+        <text transform="translate(238,69)" font-size="5" style="fill:rgb(147, 215, 65)">taken</text>
+        <text transform="translate(357,30)" font-size="5" style="fill:rgb(226, 228, 24)">castle</text>
+        <text transform="translate(193,172)" font-size="5" style="fill:rgb(94, 201, 98)">whole</text>
+        <text transform="translate(15,68)" font-size="5" style="fill:rgb(200, 224, 32)">got</text>
+        <text transform="translate(85,36) rotate(-90)" font-size="5" style="fill:rgb(82, 197, 105)">daughter</text>
+        <text transform="translate(16,128) rotate(-90)" font-size="5" style="fill:rgb(39, 126, 142)">people</text>
+        <text transform="translate(7,157)" font-size="5" style="fill:rgb(35, 137, 142)">three</text>
+        <text transform="translate(148,78) rotate(-90)" font-size="5" style="fill:rgb(165, 219, 54)">gentleman</text>
+        <text transform="translate(116,98)" font-size="5" style="fill:rgb(70, 51, 127)">seemed</text>
+        <text transform="translate(313,131)" font-size="5" style="fill:rgb(32, 147, 140)">back</text>
+        <text transform="translate(171,197)" font-size="4" style="fill:rgb(216, 226, 25)">La Mancha</text>
+        <text transform="translate(342,30)" font-size="4" style="fill:rgb(70, 11, 94)">alway</text>
+        <text transform="translate(151,95)" font-size="4" style="fill:rgb(43, 116, 142)">ground</text>
+        <text transform="translate(1,35)" font-size="4" style="fill:rgb(53, 94, 141)">point</text>
+        <text transform="translate(179,15)" font-size="4" style="fill:rgb(35, 137, 142)">person</text>
+        <text transform="translate(31,158)" font-size="4" style="fill:rgb(32, 146, 140)">hold</text>
+        <text transform="translate(70,98)" font-size="4" style="fill:rgb(248, 230, 33)">together</text>
+        <text transform="translate(176,5)" font-size="4" style="fill:rgb(205, 225, 29)">already</text>
+        <text transform="translate(132,197)" font-size="4" style="fill:rgb(69, 53, 129)">inn</text>
+        <text transform="translate(214,114)" font-size="4" style="fill:rgb(64, 189, 114)">work</text>
+        <text transform="translate(396,12) rotate(-90)" font-size="4" style="fill:rgb(67, 62, 133)">bring</text>
+        <text transform="translate(105,129)" font-size="4" style="fill:rgb(49, 104, 142)">lord</text>
+        <text transform="translate(289,158) rotate(-90)" font-size="4" style="fill:rgb(71, 14, 97)">chivalry</text>
+        <text transform="translate(224,127)" font-size="4" style="fill:rgb(40, 124, 142)">return</text>
+        <text transform="translate(265,197) rotate(-90)" font-size="4" style="fill:rgb(71, 42, 122)">believe</text>
+        <text transform="translate(18,74)" font-size="4" style="fill:rgb(69, 5, 89)">face</text>
+        <text transform="translate(248,172)" font-size="4" style="fill:rgb(65, 68, 135)">alone</text>
+        <text transform="translate(88,64)" font-size="4" style="fill:rgb(65, 68, 135)">story</text>
+        <text transform="translate(190,44)" font-size="4" style="fill:rgb(55, 90, 140)">island</text>
+        <text transform="translate(59,158)" font-size="4" style="fill:rgb(34, 139, 141)">making</text>
+        <text transform="translate(334,27) rotate(-90)" font-size="4" style="fill:rgb(72, 38, 119)">moment</text>
+        <text transform="translate(334,166)" font-size="4" style="fill:rgb(46, 179, 124)">fair</text>
+        <text transform="translate(352,51)" font-size="4" style="fill:rgb(205, 225, 29)">half</text>
+        <text transform="translate(178,82) rotate(-90)" font-size="4" style="fill:rgb(129, 211, 77)">help</text>
+        <text transform="translate(120,129)" font-size="4" style="fill:rgb(105, 205, 91)">history</text>
+        <text transform="translate(213,54)" font-size="4" style="fill:rgb(31, 154, 138)">something</text>
+        <text transform="translate(272,13)" font-size="4" style="fill:rgb(64, 70, 136)">fear</text>
+        <text transform="translate(280,47)" font-size="4" style="fill:rgb(56, 89, 140)">ll</text>
+        <text transform="translate(380,162)" font-size="4" style="fill:rgb(134, 213, 73)">rather</text>
+        </svg>
     </body>
 </html>

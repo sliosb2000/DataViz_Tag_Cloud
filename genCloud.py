@@ -37,7 +37,7 @@ contents = """
     </style>
     </head>
     <body>
-    <text>text</text>
+    #### SVG INFO GOES HERE ####
     </body>
 </html>
 """
