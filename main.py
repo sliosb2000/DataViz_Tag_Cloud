@@ -18,3 +18,25 @@ f = open("cloud.svg","w+")
 f.write(wordcloud_svg )
 f.close()
 
+# We need to make an HTML Generator in python
+# the idea is to use a HTML page to format the interaction with the SVG
+# so by importing the SVG into the HTML document and by making the CSS for all <text> items
+# All the words will react in the same way (depending on what we choose them to do)
+html: open('index.html','w')
+
+contents = """
+<html>
+    <head>
+    <style>
+    text:focus,text:hover {
+        font-weight: bold;
+    }
+    </style>
+    </head>
+    <body>
+    <text>text</text>
+    </body>
+</html>
+"""
+html.write(contents)
+html.close

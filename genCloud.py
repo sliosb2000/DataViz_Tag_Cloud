@@ -1,6 +1,9 @@
+from email import message
 import os
 
 from os import path
+from typing import TextIO
+
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
@@ -22,3 +25,21 @@ f.close()
 # the idea is to use a HTML page to format the interaction with the SVG
 # so by importing the SVG into the HTML document and by making the CSS for all <text> items
 # All the words will react in the same way (depending on what we choose them to do)
+f = open('index.html','w')
+
+contents = """
+<html>
+    <head>
+    <style>
+    text:focus,text:hover {
+        font-weight: bold;
+    }
+    </style>
+    </head>
+    <body>
+    <text>text</text>
+    </body>
+</html>
+"""
+f.write(contents)
+f.close
