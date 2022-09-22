@@ -16,19 +16,19 @@ text = open(path.join(d, 'input.txt')).read()
 # generates the word cloud with arguments
 wordcloud = WordCloud(background_color = 'white', max_font_size=40).generate(text)
 
+# Creates SVG file
 wordcloud_svg = wordcloud.to_svg(embed_font=True)
-f = open("cloud.svg","w+")
-f.write(wordcloud_svg)
+# this line below is actually used to write the SVG info into the HTML DOC
 info = wordcloud_svg
-f.close()
 
-with open('cloud.svg', 'r') as file:
-    pass
+# creates an actual SVG file
+#f = open("cloud.svg","w+")
+#f.write(wordcloud_svg)
+#f.close()
 
-# We need to make an HTML Generator in python
-# the idea is to use a HTML page to format the interaction with the SVG
-# so by importing the SVG into the HTML document and by making the CSS for all <text> items
-# All the words will react in the same way (depending on what we choose them to do)
+
+# Here we Generate the HTML File we write the nessesary text to generate
+# the file to our liking.
 f = open('index.html','w')
 
 Top = """
