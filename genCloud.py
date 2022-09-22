@@ -18,8 +18,12 @@ wordcloud = WordCloud(background_color = 'white', max_font_size=40).generate(tex
 
 wordcloud_svg = wordcloud.to_svg(embed_font=True)
 f = open("cloud.svg","w+")
-f.write(wordcloud_svg )
+f.write(wordcloud_svg)
+info = wordcloud_svg
 f.close()
+
+with open('cloud.svg', 'r') as file:
+    pass
 
 # We need to make an HTML Generator in python
 # the idea is to use a HTML page to format the interaction with the SVG
@@ -27,7 +31,7 @@ f.close()
 # All the words will react in the same way (depending on what we choose them to do)
 f = open('index.html','w')
 
-contents = """
+Top = """
 <html>
     <head>
     <style>
@@ -37,9 +41,10 @@ contents = """
     </style>
     </head>
     <body>
-    #### SVG INFO GOES HERE ####
+"""
+Bottom ="""
     </body>
 </html>
 """
-f.write(contents)
+f.write(Top + info + Bottom)
 f.close
