@@ -14,7 +14,9 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 text = open(path.join(d, 'input.txt')).read()
 
 # generates the word cloud with arguments
-wordcloud = WordCloud(background_color = 'white', max_font_size=40).generate(text)
+wordcloud = WordCloud(
+    background_color='Rosybrown', max_font_size=64, min_word_length=3, width=400, height=400, colormap="Pastel1",
+).generate(text)
 
 # Creates SVG file
 wordcloud_svg = wordcloud.to_svg(embed_font=True)
@@ -22,14 +24,14 @@ wordcloud_svg = wordcloud.to_svg(embed_font=True)
 info = wordcloud_svg
 
 # creates an actual SVG file
-#f = open("cloud.svg","w+")
-#f.write(wordcloud_svg)
-#f.close()
+# f = open("cloud.svg","w+")
+# f.write(wordcloud_svg)
+# f.close()
 
 
 # Here we Generate the HTML File we write the nessesary text to generate
 # the file to our liking.
-f = open('index.html','w')
+f = open('index.html', 'w')
 
 Top = """
 <html>
@@ -42,7 +44,7 @@ Top = """
     </head>
     <body>
 """
-Bottom ="""
+Bottom = """
     </body>
 </html>
 """
