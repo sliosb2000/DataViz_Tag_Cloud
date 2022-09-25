@@ -12,6 +12,7 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
 text = open(path.join(d, 'input.txt')).read()
+#text = open(path.join(d, 'pridpred.txt')).read()
 
 # generates the word cloud with arguments
 wordcloud = WordCloud(
@@ -36,6 +37,7 @@ f = open('index.html', 'w')
 Top = """
 <html>
     <head>
+    <meta charset="UTF-8">
     <style>
     text:focus,text:hover {
         font-weight: bold;
