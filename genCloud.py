@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
-text = open(path.join(d, 'input.txt')).read()
+text = open(path.join(d, 'input.txt'), encoding='utf-8').read()
 #text = open(path.join(d, 'pridpred.txt')).read()
 
 # generates the word cloud with arguments
