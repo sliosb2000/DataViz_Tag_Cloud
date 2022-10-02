@@ -4,6 +4,7 @@ from os import path
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
+
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
@@ -40,3 +41,4 @@ contents = """
 """
 html.write(contents)
 html.close
+

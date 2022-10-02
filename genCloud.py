@@ -1,12 +1,58 @@
 from email import message
 import os
 
+import frequenciesAndScores
+from frequenciesAndScores import FrequenciesAndScores
+from basicWordProcessor import BasicWordProcessor
+
 from os import path
 from typing import TextIO
 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
+# Gets a dictionary of words and important values from an unstructured text document.
+# inputText: An unstructured text file.
+# tokenProcessor: Used to process a token into an acceptable format.
+# return: A dictionary(word, frequenciesAndScores).
+# TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
+#  their counts.
+def get_word_counts(inputText, tokenProcessor):
+    words = inputText.split()
+    wordsAndFrequencies = {}
+    discoveredWords = []
+    for word in words:
+        processed = tokenProcessor.process_token(word)
+        if(wordsAndFrequencies.__contains__(processed)):
+            wordsAndFrequencies.get(processed).increment_frequency()
+            if not(discoveredWords.__contains__(processed)):
+                wordsAndFrequencies.get(processed).increment_doc_frequency()
+                discoveredWords.append(processed)
+        else:
+            wordsAndFrequencies[processed] = frequenciesAndScores.FrequenciesAndScores()
+            discoveredWords.append(processed)
+
+    #Once all the docs have been processed, we can go through and update each word's weight.
+    for key in wordsAndFrequencies:
+        wordsAndFrequencies[key].update_weight(1)
+
+    #Debug printing
+    for key in wordsAndFrequencies:
+        print(key)
+        print(wordsAndFrequencies.get(key))
+
+    return wordsAndFrequencies
+
+def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWeight):
+    wordsAndCounts = { }
+    for word in wordsAndWeights:
+        if(wordsAndWeights.get(word).weight >= targetWeight):
+            wordsAndCounts[word] = wordsAndWeights.get(word).frequency
+
+    return wordsAndCounts
+
+
+processor = BasicWordProcessor()
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
@@ -14,10 +60,15 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 text = open(path.join(d, 'input.txt'), encoding='utf-8').read()
 #text = open(path.join(d, 'pridpred.txt')).read()
 
+counts = get_word_counts(text, processor)
+filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 0.0)
+
+
 # generates the word cloud with arguments
 wordcloud = WordCloud(
     background_color='Rosybrown', max_font_size=64, min_word_length=3, width=400, height=400, colormap="Pastel1",
-).generate(text)
+).generate_from_frequencies(filteredWords)
+
 
 # Creates SVG file
 wordcloud_svg = wordcloud.to_svg(embed_font=True)
