@@ -71,7 +71,7 @@ d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 #text = open(path.join(d, 'pridpred.txt')).read()
 
 counts = get_word_counts('Documents', processor)
-filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 0.0)
+filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
 
 
 # generates the word cloud with arguments
