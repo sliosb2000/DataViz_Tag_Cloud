@@ -17,24 +17,34 @@ import matplotlib.pyplot as plt
 # return: A dictionary(word, frequenciesAndScores).
 # TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
 #  their counts.
-def get_word_counts(inputText, tokenProcessor):
-    words = inputText.split()
+def get_word_counts(directory, tokenProcessor):
+    totalDocs = 0
     wordsAndFrequencies = {}
-    discoveredWords = []
-    for word in words:
-        processed = tokenProcessor.process_token(word)
-        if(wordsAndFrequencies.__contains__(processed)):
-            wordsAndFrequencies.get(processed).increment_frequency()
-            if not(discoveredWords.__contains__(processed)):
-                wordsAndFrequencies.get(processed).increment_doc_frequency()
-                discoveredWords.append(processed)
-        else:
-            wordsAndFrequencies[processed] = frequenciesAndScores.FrequenciesAndScores()
-            discoveredWords.append(processed)
+
+    for filename in os.listdir(directory):
+        inputText = os.path.join(directory, filename)
+        #Check if file
+        if os.path.isfile(inputText):
+            discoveredWords = []
+            totalDocs += 1
+            print("Scanning document: " + filename)
+            text = open(path.join(directory, filename), encoding='utf-8').read()
+            words = text.split()
+
+            for word in words:
+                processed = tokenProcessor.process_token(word)
+                if(wordsAndFrequencies.__contains__(processed)):
+                    wordsAndFrequencies.get(processed).increment_frequency()
+                    if not(discoveredWords.__contains__(processed)):
+                        wordsAndFrequencies.get(processed).increment_doc_frequency()
+                        discoveredWords.append(processed)
+                else:
+                    wordsAndFrequencies[processed] = frequenciesAndScores.FrequenciesAndScores()
+                    discoveredWords.append(processed)
 
     #Once all the docs have been processed, we can go through and update each word's weight.
     for key in wordsAndFrequencies:
-        wordsAndFrequencies[key].update_weight(1)
+        wordsAndFrequencies[key].update_weight(totalDocs)
 
     #Debug printing
     for key in wordsAndFrequencies:
@@ -57,10 +67,10 @@ processor = BasicWordProcessor()
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
-text = open(path.join(d, 'input.txt'), encoding='utf-8').read()
+#text = open(path.join(d, 'Documents/input.txt'), encoding='utf-8').read()
 #text = open(path.join(d, 'pridpred.txt')).read()
 
-counts = get_word_counts(text, processor)
+counts = get_word_counts('Documents', processor)
 filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 0.0)
 
 

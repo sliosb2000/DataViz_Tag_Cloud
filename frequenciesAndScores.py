@@ -15,7 +15,7 @@ class FrequenciesAndScores:
 
     # weight = frequency * log(1 + (total_documents/doc_frequency))
     def update_weight(self, total_documents):
-        self.weight = self.frequency * math.log(1 + (total_documents/self.doc_frequency))
+        self.weight = self.frequency * math.log((total_documents/1 + self.doc_frequency))
 
     def __str__(self):
         return "Frequency: " + str(self.frequency) + " | Docs: " + str(self.doc_frequency) \

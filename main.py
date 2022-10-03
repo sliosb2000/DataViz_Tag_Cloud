@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
 
 # Read the whole text.
-text = open(path.join(d, 'input.txt')).read()
+text = open(path.join(d, 'Documents/input.txt')).read()
 
 
 wordcloud = WordCloud(background_color = 'white', max_font_size=40).generate(text)
