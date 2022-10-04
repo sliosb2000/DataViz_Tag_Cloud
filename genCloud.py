@@ -11,6 +11,15 @@ from basicWordProcessor import BasicWordProcessor
 # return: A dictionary(word, frequenciesAndScores).
 # TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
 #  their counts.
+def wordcloud_gen(folder):
+    counts = get_word_counts(folder, processor)
+    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
+    info = wordcloud_svg_gen(filteredWords)
+    svg_tooltip_gen(info)
+    html_name = folder + ".html"
+    f = open(html_name, 'w')
+    html_builder(f, info)
+
 def get_word_counts(directory, tokenProcessor):
     totalDocs = 0
     wordsAndFrequencies = {}
@@ -55,14 +64,6 @@ def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWei
 
     return wordsAndCounts
 
-def wordcloud_gen(folder):
-    counts = get_word_counts(folder, processor)
-    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
-    info = wordcloud_svg_gen(filteredWords)
-    html_name = folder + ".html"
-    f = open(html_name, 'w')
-    html_builder(f, info)
-
 def wordcloud_svg_gen(text):
     # generates the word cloud with arguments
     wordcloud = WordCloud(
@@ -73,6 +74,10 @@ def wordcloud_svg_gen(text):
     # this line below is actually used to write the SVG info into the HTML DOC
     info = wordcloud_svg
     return info
+
+def svg_tooltip_gen(data):
+    pass
+
 
 def html_builder(file, svg_file):
     Top = """
