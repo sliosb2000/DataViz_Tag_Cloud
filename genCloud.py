@@ -1,15 +1,9 @@
-from email import message
-import os
-
 import frequenciesAndScores
-from frequenciesAndScores import FrequenciesAndScores
+import os
+from os import path
+from wordcloud import WordCloud
 from basicWordProcessor import BasicWordProcessor
 
-from os import path
-from typing import TextIO
-
-from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 
 # Gets a dictionary of words and important values from an unstructured text document.
 # inputText: An unstructured text file.
@@ -61,55 +55,61 @@ def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWei
 
     return wordsAndCounts
 
+def wordcloud_gen(folder):
+    counts = get_word_counts(folder, processor)
+    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
+    info = wordcloud_svg_gen(filteredWords)
+    html_name = folder + ".html"
+    f = open(html_name, 'w')
+    html_builder(f, info)
+
+def wordcloud_svg_gen(text):
+    # generates the word cloud with arguments
+    wordcloud = WordCloud(
+        background_color='white', max_font_size=64, min_word_length=3, width=400, height=400, colormap="flag",
+    ).generate_from_frequencies(text)
+    # Creates SVG file
+    wordcloud_svg = wordcloud.to_svg(embed_font=True)
+    # this line below is actually used to write the SVG info into the HTML DOC
+    info = wordcloud_svg
+    return info
+
+def html_builder(file, svg_file):
+    Top = """
+    <html>
+        <head>
+        <meta charset="UTF-8">
+        <style>
+        text:focus,text:hover {
+            font-weight: bold;
+        }
+        </style>
+        </head>
+        <body>
+    """
+    Bottom = """
+        </body>
+    </html>
+    """
+    file.write(Top + svg_file + Bottom)
+    file.close
+
 
 processor = BasicWordProcessor()
-# get data directory (using getcwd() is needed to support running example in generated IPython notebook)
-d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
-
-# Read the whole text.
-#text = open(path.join(d, 'Documents/input.txt'), encoding='utf-8').read()
-#text = open(path.join(d, 'pridpred.txt')).read()
-
-counts = get_word_counts('Documents', processor)
-filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
-
-
-# generates the word cloud with arguments
-wordcloud = WordCloud(
-    background_color='Rosybrown', max_font_size=64, min_word_length=3, width=400, height=400, colormap="Pastel1",
-).generate_from_frequencies(filteredWords)
-
-
-# Creates SVG file
-wordcloud_svg = wordcloud.to_svg(embed_font=True)
-# this line below is actually used to write the SVG info into the HTML DOC
-info = wordcloud_svg
-
-# creates an actual SVG file
-# f = open("cloud.svg","w+")
-# f.write(wordcloud_svg)
-# f.close()
-
-
-# Here we Generate the HTML File we write the nessesary text to generate
-# the file to our liking.
-f = open('index.html', 'w')
-
-Top = """
-<html>
-    <head>
-    <meta charset="UTF-8">
-    <style>
-    text:focus,text:hover {
-        font-weight: bold;
-    }
-    </style>
-    </head>
-    <body>
-"""
-Bottom = """
-    </body>
-</html>
-"""
-f.write(Top + info + Bottom)
-f.close
+# # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
+# # d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
+# # Read the whole text.
+# # text = open(path.join(d, 'Documents/input.txt'), encoding='utf-8').read()
+# # text = open(path.join(d, 'pridpred.txt')).read()
+#
+# counts = get_word_counts('Speeches', processor)
+# filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
+#
+# # generates the word cloud with arguments into SVG
+# info = wordcloud_svg_gen(filteredWords)
+#
+# # Here we Generate the HTML File we write the nessesary text to generate
+# # the file to our liking.
+# f = open('index.html', 'w')
+# html_builder(f,info)
+wordcloud_gen('Speeches')
