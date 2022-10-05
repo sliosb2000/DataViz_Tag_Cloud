@@ -11,13 +11,24 @@ from basicWordProcessor import BasicWordProcessor
 # return: A dictionary(word, frequenciesAndScores).
 # TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
 #  their counts.
+def wordcloud_gen(folder):  # This is the Head function of the whole project
+    counts = get_word_counts(folder, processor)  # gets the words from the documents within the folder
+    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)  # finds freq of said words
+    info = wordcloud_svg_gen(filteredWords)  # creates the SVG of the word cloud
+    info = svg_tooltip_gen(info, filteredWords)  # modifies the SVG info to add tooltip data
+    html_name = folder + ".html"  # gives html file output name
+    f = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
+    html_builder(f, info)  # enters html info into opened file
+    f.close()
+
+
 def get_word_counts(directory, tokenProcessor):
     totalDocs = 0
     wordsAndFrequencies = {}
 
     for filename in os.listdir(directory):
         inputText = os.path.join(directory, filename)
-        #Check if file
+        # Check if file
         if os.path.isfile(inputText):
             discoveredWords = []
             totalDocs += 1
@@ -27,41 +38,35 @@ def get_word_counts(directory, tokenProcessor):
 
             for word in words:
                 processed = tokenProcessor.process_token(word)
-                if(wordsAndFrequencies.__contains__(processed)):
+                if (wordsAndFrequencies.__contains__(processed)):
                     wordsAndFrequencies.get(processed).increment_frequency()
-                    if not(discoveredWords.__contains__(processed)):
+                    if not (discoveredWords.__contains__(processed)):
                         wordsAndFrequencies.get(processed).increment_doc_frequency()
                         discoveredWords.append(processed)
                 else:
                     wordsAndFrequencies[processed] = frequenciesAndScores.FrequenciesAndScores()
                     discoveredWords.append(processed)
 
-    #Once all the docs have been processed, we can go through and update each word's weight.
+    # Once all the docs have been processed, we can go through and update each word's weight.
     for key in wordsAndFrequencies:
         wordsAndFrequencies[key].update_weight(totalDocs)
 
-    #Debug printing
+    # Debug printing
     for key in wordsAndFrequencies:
-        print(key)
+        print(key + '\taa')
         print(wordsAndFrequencies.get(key))
 
     return wordsAndFrequencies
 
+
 def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWeight):
-    wordsAndCounts = { }
+    wordsAndCounts = {}
     for word in wordsAndWeights:
-        if(wordsAndWeights.get(word).weight >= targetWeight):
+        if (wordsAndWeights.get(word).weight >= targetWeight):
             wordsAndCounts[word] = wordsAndWeights.get(word).frequency
 
     return wordsAndCounts
 
-def wordcloud_gen(folder):
-    counts = get_word_counts(folder, processor)
-    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)
-    info = wordcloud_svg_gen(filteredWords)
-    html_name = folder + ".html"
-    f = open(html_name, 'w')
-    html_builder(f, info)
 
 def wordcloud_svg_gen(text):
     # generates the word cloud with arguments
@@ -73,6 +78,18 @@ def wordcloud_svg_gen(text):
     # this line below is actually used to write the SVG info into the HTML DOC
     info = wordcloud_svg
     return info
+
+
+def svg_tooltip_gen(data, dictionary):
+    for word in dictionary:
+        print(word)
+        # https://www.w3schools.com/python/ref_string_replace.asp
+        # We need to find the term in the html file and replace it
+        # if word is in data:
+        #   replace word with word + <title>word.key</title>
+        pass
+    return data
+
 
 def html_builder(file, svg_file):
     Top = """
@@ -92,7 +109,6 @@ def html_builder(file, svg_file):
     </html>
     """
     file.write(Top + svg_file + Bottom)
-    file.close
 
 
 processor = BasicWordProcessor()
