@@ -142,4 +142,4 @@ processor = BasicWordProcessor()
 # # the file to our liking.
 # f = open('index.html', 'w')
 # html_builder(f,info)
-wordcloud_gen('Speeches')
+wordcloud_gen('nixon')
