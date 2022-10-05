@@ -15,7 +15,7 @@ def wordcloud_gen(folder):  # This is the Head function of the whole project
     counts = get_word_counts(folder, processor)  # gets the words from the documents within the folder
     filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)  # finds freq of said words
     info = wordcloud_svg_gen(filteredWords)  # creates the SVG of the word cloud
-    info = svg_tooltip_gen(info, filteredWords)  # modifies the SVG info to add tooltip data
+    #info = svg_tooltip_gen(info, filteredWords)  # modifies the SVG info to add tooltip data # Obscolete, the svg is build in html_builder()
     html_name = folder + ".html"  # gives html file output name
     f = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
     html_builder(f, info)  # enters html info into opened file
@@ -108,7 +108,21 @@ def html_builder(file, svg_file):
         </body>
     </html>
     """
-    file.write(Top + svg_file + Bottom)
+    
+    open("temp_svg.svg","w").write(svg_file) #there probably is a be a better idea, smoother
+    
+    read = open("temp_svg.svg","r")
+    write_svg = ""
+    for line in read:
+        word =line.split(">")[1].split("<")[0] 
+        if len(word)>1 and len(word)<72:      #to ignore the first three lines and empty ones
+            s = word+"<title>"+word+"</title>"
+            li = line.replace(word,s)
+            write_svg+=li
+        else:
+            write_svg += line
+    
+    file.write(Top + write_svg + Bottom)
 
 
 processor = BasicWordProcessor()
