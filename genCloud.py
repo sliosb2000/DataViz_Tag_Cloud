@@ -72,7 +72,7 @@ def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWei
 def wordcloud_svg_gen(text):
     # generates the word cloud with arguments
     wordcloud = WordCloud(
-        background_color='white', max_font_size=64, min_word_length=3, width=400, height=400, colormap="flag",
+        background_color='white', max_font_size=90, min_word_length=3, width=800, height=800, colormap="coolwarm",
     ).generate_from_frequencies(text)
     # Creates SVG file
     wordcloud_svg = wordcloud.to_svg(embed_font=True)
@@ -99,10 +99,31 @@ def svg_edit(svg_file, wordData):
 
 def html_builder(file, eis, ken, nix):
     Top = """
-    <html>
+    <!doctype html>
+    <html lang="en">
         <head>
         <meta charset="UTF-8">
         <style>
+        html {
+            height: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background-color: #1c687e;
+        }
+        select {
+            position: relative;
+            padding: auto;
+            text-align: center;
+        }
+        svg {
+            position:relative;
+            justify-content: center;
+            display: flex;
+            border-radius: 9px;
+            padding: 0px;
+            box-shadow: 8px 10px 5px #080809;
+        }
         text:focus,text:hover {
             font-weight: bold;
         }
