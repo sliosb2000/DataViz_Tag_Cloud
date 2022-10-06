@@ -18,7 +18,7 @@ def wordcloud_gen(folder):  # This is the Head function of the whole project
     #info = svg_tooltip_gen(info, filteredWords)  # modifies the SVG info to add tooltip data # Obscolete, the svg is build in html_builder()
     html_name = folder + ".html"  # gives html file output name
     f = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
-    html_builder(f, info)  # enters html info into opened file
+    html_builder(f, info, counts)  # enters html info into opened file
     f.close()
 
 
@@ -91,7 +91,7 @@ def svg_tooltip_gen(data, dictionary):
     return data
 
 
-def html_builder(file, svg_file):
+def html_builder(file, svg_file, wordData):
     Top = """
     <html>
         <head>
@@ -114,9 +114,10 @@ def html_builder(file, svg_file):
     read = open("temp_svg.svg","r")
     write_svg = ""
     for line in read:
-        word =line.split(">")[1].split("<")[0] 
+        word =line.split(">")[1].split("<")[0]
         if len(word)>1 and len(word)<72:      #to ignore the first three lines and empty ones
-            s = word+"<title>"+word+"</title>"
+            s = word+"<title> Word: "+word+"\nOccurrences: "+str(wordData[word].frequency)+"\nWeight: "\
+                +str(round(wordData[word].weight, 3))+"</title>"
             li = line.replace(word,s)
             write_svg+=li
         else:
