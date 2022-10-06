@@ -6,222 +6,1853 @@
         text:focus,text:hover {
             font-weight: bold;
         }
-        .tooltip .tooltiptext {
-        width: 120px;
-        top: 100%;
-        left: 50%;
-        margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-}
         </style>
         </head>
         <body>
-            <div title="CoolTip">
-                <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
-                <style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,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")format("woff");}</style>
-                <style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
-                <rect width="100%" height="100%" style="fill:white"></rect>
-                <text transform="translate(58,157)" font-size="51" style="fill:rgb(0, 0, 34)" title="THIS WORKS">university</text>
-                <text transform="translate(6,200)" font-size="42" style="fill:rgb(157, 206, 255)">additional</text>
-                <text transform="translate(32,49)" font-size="42" style="fill:rgb(31, 65, 255)">dollars</text>
-                <text transform="translate(159,289)" font-size="38" style="fill:rgb(195, 0, 0)">platform</text>
-                <text transform="translate(90,249)" font-size="38" style="fill:rgb(0, 0, 31)">soft</text>
-                <text transform="translate(122,386)" font-size="34" style="fill:rgb(0, 0, 31)">senator</text>
-                <text transform="translate(56,78)" font-size="34" style="fill:rgb(255, 0, 0)">coming</text>
-                <text transform="translate(283,204)" font-size="34" style="fill:rgb(50, 0, 0)">fair</text>
-                <text transform="translate(276,93)" font-size="34" style="fill:rgb(255, 33, 11)">deal</text>
-                <text transform="translate(197,231)" font-size="34" style="fill:rgb(101, 0, 0)">election</text>
-                <text transform="translate(382,398) rotate(-90)" font-size="34" style="fill:rgb(252, 254, 255)">protestant</text>
-                <text transform="translate(9,110)" font-size="32" style="fill:rgb(0, 5, 255)">massachusetts</text>
-                <text transform="translate(246,49)" font-size="32" style="fill:rgb(105, 0, 0)">odegaard</text>
-                <text transform="translate(180,253)" font-size="27" style="fill:rgb(227, 248, 255)">adversaries</text>
-                <text transform="translate(281,386)" font-size="27" style="fill:rgb(0, 0, 129)">force</text>
-                <text transform="translate(16,276)" font-size="27" style="fill:rgb(175, 219, 255)">solution</text>
-                <text transform="translate(4,293)" font-size="24" style="fill:rgb(0, 0, 87)">appeasement</text>
-                <text transform="translate(29,219)" font-size="24" style="fill:rgb(195, 0, 0)">believes</text>
-                <text transform="translate(206,25)" font-size="24" style="fill:rgb(247, 0, 0)">else</text>
-                <text transform="translate(257,111)" font-size="24" style="fill:rgb(0, 0, 192)">conclusion</text>
-                <text transform="translate(266,19)" font-size="21" style="fill:rgb(19, 0, 0)">convention</text>
-                <text transform="translate(3,385)" font-size="20" style="fill:rgb(0, 0, 214)">republican</text>
-                <text transform="translate(185,65)" font-size="20" style="fill:rgb(0, 0, 255)">someone</text>
-                <text transform="translate(15,314)" font-size="20" style="fill:rgb(112, 165, 255)">relevant</text>
-                <text transform="translate(5,249)" font-size="20" style="fill:rgb(255, 9, 0)">richard</text>
-                <text transform="translate(191,81)" font-size="20" style="fill:rgb(255, 248, 227)">attend</text>
-                <text transform="translate(231,303)" font-size="18" style="fill:rgb(255, 255, 255)">catholics</text>
-                <text transform="translate(14,125)" font-size="18" style="fill:rgb(122, 0, 0)">died</text>
-                <text transform="translate(17,154)" font-size="18" style="fill:rgb(108, 161, 255)">bay</text>
-                <text transform="translate(122,17)" font-size="15" style="fill:rgb(19, 47, 255)">graduates</text>
-                <text transform="translate(12,86) rotate(-90)" font-size="15" style="fill:rgb(31, 0, 0)">percent</text>
-                <text transform="translate(264,174)" font-size="15" style="fill:rgb(0, 5, 255)">send</text>
-                <text transform="translate(186,121)" font-size="15" style="fill:rgb(255, 255, 255)">answer</text>
-                <text transform="translate(352,67)" font-size="15" style="fill:rgb(202, 236, 255)">lack</text>
-                <text transform="translate(6,170)" font-size="15" style="fill:rgb(255, 248, 227)">talk</text>
-                <text transform="translate(153,311)" font-size="15" style="fill:rgb(211, 241, 255)">inspire</text>
-                <text transform="translate(370,197) rotate(-90)" font-size="15" style="fill:rgb(0, 0, 73)">among</text>
-                <text transform="translate(321,126)" font-size="15" style="fill:rgb(0, 0, 0)">vital</text>
-                <text transform="translate(347,368) rotate(-90)" font-size="15" style="fill:rgb(0, 0, 164)">nothing</text>
-                <text transform="translate(5,18)" font-size="15" style="fill:rgb(0, 0, 185)">dare</text>
-                <text transform="translate(161,214)" font-size="15" style="fill:rgb(224, 247, 255)">join</text>
-                <text transform="translate(353,79)" font-size="15" style="fill:rgb(233, 0, 0)">begin</text>
-                <text transform="translate(139,122)" font-size="15" style="fill:rgb(255, 195, 143)">gives</text>
-                <text transform="translate(384,193) rotate(-90)" font-size="15" style="fill:rgb(175, 219, 255)">propose</text>
-                <text transform="translate(149,172)" font-size="15" style="fill:rgb(0, 0, 19)">worldwide</text>
-                <text transform="translate(286,314)" font-size="15" style="fill:rgb(255, 172, 119)">asset</text>
-                <text transform="translate(24,80) rotate(-90)" font-size="15" style="fill:rgb(255, 61, 28)">higher</text>
-                <text transform="translate(63,117)" font-size="12" style="fill:rgb(0, 0, 0)">governor</text>
-                <text transform="translate(156,394)" font-size="12" style="fill:rgb(227, 248, 255)">stevenson</text>
-                <text transform="translate(395,282) rotate(-90)" font-size="12" style="fill:rgb(252, 0, 0)">butler</text>
-                <text transform="translate(23,371) rotate(-90)" font-size="12" style="fill:rgb(255, 9, 0)">humphrey</text>
-                <text transform="translate(124,299)" font-size="12" style="fill:rgb(255, 222, 178)">name</text>
-                <text transform="translate(280,395)" font-size="12" style="fill:rgb(205, 238, 255)">nomination</text>
-                <text transform="translate(392,336) rotate(-90)" font-size="12" style="fill:rgb(255, 245, 221)">dignity</text>
-                <text transform="translate(71,12)" font-size="12" style="fill:rgb(94, 146, 255)">render</text>
-                <text transform="translate(244,120)" font-size="12" style="fill:rgb(255, 83, 44)">facing</text>
-                <text transform="translate(53,393)" font-size="12" style="fill:rgb(255, 182, 129)">account</text>
-                <text transform="translate(391,389) rotate(-90)" font-size="12" style="fill:rgb(188, 228, 255)">telling</text>
-                <text transform="translate(112,392)" font-size="12" style="fill:rgb(122, 0, 0)">career</text>
-                <text transform="translate(209,35)" font-size="12" style="fill:rgb(178, 0, 0)">voted</text>
-                <text transform="translate(221,395)" font-size="12" style="fill:rgb(0, 0, 84)">known</text>
-                <text transform="translate(246,341)" font-size="12" style="fill:rgb(126, 179, 255)">fit</text>
-                <text transform="translate(26,76)" font-size="12" style="fill:rgb(255, 5, 0)">bold</text>
-                <text transform="translate(281,263)" font-size="12" style="fill:rgb(0, 0, 221)">franklin</text>
-                <text transform="translate(83,369)" font-size="12" style="fill:rgb(255, 201, 150)">farm</text>
-                <text transform="translate(352,302) rotate(-90)" font-size="12" style="fill:rgb(255, 243, 214)">medical</text>
-                <text transform="translate(63,87)" font-size="12" style="fill:rgb(252, 0, 0)">darkness</text>
-                <text transform="translate(302,67)" font-size="12" style="fill:rgb(255, 61, 28)">safe</text>
-                <text transform="translate(391,236) rotate(-90)" font-size="12" style="fill:rgb(255, 255, 255)">taking</text>
-                <text transform="translate(16,226)" font-size="10" style="fill:rgb(0, 0, 0)">changing</text>
-                <text transform="translate(294,26)" font-size="9" style="fill:rgb(255, 118, 70)">population</text>
-                <text transform="translate(8,133)" font-size="9" style="fill:rgb(182, 224, 255)">onethird</text>
-                <text transform="translate(155,261)" font-size="9" style="fill:rgb(241, 252, 255)">ends</text>
-                <text transform="translate(236,88)" font-size="9" style="fill:rgb(185, 226, 255)">threats</text>
-                <text transform="translate(344,26)" font-size="9" style="fill:rgb(0, 0, 178)">explosion</text>
-                <text transform="translate(309,181) rotate(-90)" font-size="9" style="fill:rgb(175, 0, 0)">replacing</text>
-                <text transform="translate(204,46)" font-size="9" style="fill:rgb(0, 0, 227)">pioneers</text>
-                <text transform="translate(40,82)" font-size="9" style="fill:rgb(5, 24, 255)">won</text>
-                <text transform="translate(391,156) rotate(-90)" font-size="9" style="fill:rgb(202, 236, 255)">promised</text>
-                <text transform="translate(8,358) rotate(-90)" font-size="9" style="fill:rgb(255, 255, 255)">mediocrity</text>
-                <text transform="translate(80,124)" font-size="8" style="fill:rgb(211, 241, 255)">regardless</text>
-                <text transform="translate(293,339) rotate(-90)" font-size="8" style="fill:rgb(161, 209, 255)">tired</text>
-                <text transform="translate(203,261)" font-size="8" style="fill:rgb(154, 203, 255)">tory</text>
-                <text transform="translate(254,383)" font-size="8" style="fill:rgb(50, 0, 0)">harsh</text>
-                <text transform="translate(40,365)" font-size="8" style="fill:rgb(44, 0, 0)">rhetoric</text>
-                <text transform="translate(47,336)" font-size="8" style="fill:rgb(255, 105, 60)">wait</text>
-                <text transform="translate(261,182)" font-size="8" style="fill:rgb(211, 241, 255)">lord</text>
-                <text transform="translate(43,7)" font-size="8" style="fill:rgb(0, 0, 147)">weary</text>
-                <text transform="translate(99,163)" font-size="7" style="fill:rgb(0, 0, 60)">responsible</text>
-                <text transform="translate(367,94)" font-size="7" style="fill:rgb(67, 0, 0)">denied</text>
-                <text transform="translate(110,255)" font-size="7" style="fill:rgb(195, 0, 0)">religion</text>
-                <text transform="translate(111,309)" font-size="7" style="fill:rgb(0, 0, 57)">churches</text>
-                <text transform="translate(10,206)" font-size="7" style="fill:rgb(0, 0, 255)">acts</text>
-                <text transform="translate(149,55)" font-size="7" style="fill:rgb(44, 0, 0)">treated</text>
-                <text transform="translate(25,139)" font-size="7" style="fill:rgb(255, 206, 157)">someday</text>
-                <text transform="translate(303,364)" font-size="7" style="fill:rgb(255, 254, 252)">baptist</text>
-                <text transform="translate(269,56)" font-size="7" style="fill:rgb(255, 249, 230)">statute</text>
-                <text transform="translate(237,206)" font-size="7" style="fill:rgb(0, 0, 34)">protestants</text>
-                <text transform="translate(310,165)" font-size="7" style="fill:rgb(255, 244, 217)">favor</text>
-                <text transform="translate(254,190)" font-size="7" style="fill:rgb(0, 0, 208)">working</text>
-                <text transform="translate(26,88)" font-size="7" style="fill:rgb(255, 134, 84)">subvert</text>
-                <text transform="translate(221,351) rotate(-90)" font-size="7" style="fill:rgb(101, 0, 0)">forefathers</text>
-                <text transform="translate(159,318)" font-size="7" style="fill:rgb(0, 0, 91)">alamo</text>
-                <text transform="translate(3,257)" font-size="7" style="fill:rgb(0, 0, 60)">quotations</text>
-                <text transform="translate(133,88)" font-size="7" style="fill:rgb(105, 0, 0)">deny</text>
-                <text transform="translate(54,299)" font-size="7" style="fill:rgb(255, 96, 53)">accordance</text>
-                <text transform="translate(49,234)" font-size="7" style="fill:rgb(5, 24, 255)">violate</text>
-                <text transform="translate(313,339)" font-size="7" style="fill:rgb(211, 0, 0)">born</text>
-                <text transform="translate(244,313)" font-size="7" style="fill:rgb(0, 0, 19)">guided</text>
-                <text transform="translate(239,7)" font-size="7" style="fill:rgb(255, 122, 73)">beacon</text>
-                <text transform="translate(148,363)" font-size="7" style="fill:rgb(236, 251, 255)">counseled</text>
-                <text transform="translate(105,37) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 77)">colony</text>
-                <text transform="translate(301,115)" font-size="7" style="fill:rgb(60, 0, 0)">ones</text>
-                <text transform="translate(251,363)" font-size="7" style="fill:rgb(115, 0, 0)">mistakes</text>
-                <text transform="translate(30,60)" font-size="7" style="fill:rgb(255, 5, 0)">enough</text>
-                <text transform="translate(85,55)" font-size="7" style="fill:rgb(108, 0, 0)">referred</text>
-                <text transform="translate(11,396)" font-size="7" style="fill:rgb(255, 201, 150)">education</text>
-                <text transform="translate(200,298)" font-size="7" style="fill:rgb(112, 165, 255)">picture</text>
-                <text transform="translate(353,357) rotate(-90)" font-size="7" style="fill:rgb(150, 0, 0)">infinitely</text>
-                <text transform="translate(323,56)" font-size="7" style="fill:rgb(44, 0, 0)">tangled</text>
-                <text transform="translate(358,308) rotate(-90)" font-size="7" style="fill:rgb(255, 88, 47)">overnight</text>
-                <text transform="translate(55,18)" font-size="7" style="fill:rgb(244, 0, 0)">neutral</text>
-                <text transform="translate(312,173)" font-size="7" style="fill:rgb(0, 0, 255)">unable</text>
-                <text transform="translate(64,225)" font-size="7" style="fill:rgb(14, 38, 255)">abandon</text>
-                <text transform="translate(227,349) rotate(-90)" font-size="7" style="fill:rgb(255, 212, 164)">processes</text>
-                <text transform="translate(64,164)" font-size="7" style="fill:rgb(236, 0, 0)">ideals</text>
-                <text transform="translate(276,61)" font-size="7" style="fill:rgb(0, 0, 185)">reason</text>
-                <text transform="translate(176,223)" font-size="7" style="fill:rgb(77, 0, 0)">quick</text>
-                <text transform="translate(212,363)" font-size="7" style="fill:rgb(11, 0, 0)">solutions</text>
-                <text transform="translate(110,360) rotate(-90)" font-size="7" style="fill:rgb(255, 24, 5)">maturity</text>
-                <text transform="translate(127,37) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 0)">gone</text>
-                <text transform="translate(142,365) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 230)">communism</text>
-                <text transform="translate(126,315)" font-size="7" style="fill:rgb(0, 0, 185)">urge</text>
-                <text transform="translate(242,347)" font-size="7" style="fill:rgb(0, 0, 230)">pathway</text>
-                <text transform="translate(394,192) rotate(-90)" font-size="7" style="fill:rgb(3, 0, 0)">prevailed</text>
-                <text transform="translate(183,317)" font-size="7" style="fill:rgb(0, 0, 161)">firmness</text>
-                <text transform="translate(372,147) rotate(-90)" font-size="7" style="fill:rgb(126, 179, 255)">surrender</text>
-                <text transform="translate(359,368) rotate(-90)" font-size="7" style="fill:rgb(241, 252, 255)">holocaust</text>
-                <text transform="translate(175,87)" font-size="7" style="fill:rgb(60, 0, 0)">regards</text>
-                <text transform="translate(145,20)" font-size="5" style="fill:rgb(3, 19, 255)">warmongers</text>
-                <text transform="translate(41,341)" font-size="5" style="fill:rgb(0, 0, 47)">appeasers</text>
-                <text transform="translate(181,76) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 252)">unaccompanied</text>
-                <text transform="translate(234,162)" font-size="5" style="fill:rgb(255, 179, 126)">rightfully</text>
-                <text transform="translate(125,113)" font-size="5" style="fill:rgb(0, 0, 60)">wars</text>
-                <text transform="translate(168,294)" font-size="5" style="fill:rgb(168, 0, 0)">agreement</text>
-                <text transform="translate(339,177)" font-size="5" style="fill:rgb(0, 0, 91)">century</text>
-                <text transform="translate(139,396)" font-size="5" style="fill:rgb(255, 195, 143)">forms</text>
-                <text transform="translate(315,180)" font-size="5" style="fill:rgb(236, 251, 255)">word</text>
-                <text transform="translate(55,54)" font-size="5" style="fill:rgb(255, 209, 161)">friend</text>
-                <text transform="translate(22,27)" font-size="5" style="fill:rgb(168, 0, 0)">foe</text>
-                <text transform="translate(316,346)" font-size="5" style="fill:rgb(0, 0, 255)">passed</text>
-                <text transform="translate(273,160)" font-size="5" style="fill:rgb(224, 0, 0)">oppose</text>
-                <text transform="translate(335,207)" font-size="5" style="fill:rgb(255, 118, 70)">assure</text>
-                <text transform="translate(257,196)" font-size="5" style="fill:rgb(0, 0, 0)">little</text>
-                <text transform="translate(68,253)" font-size="5" style="fill:rgb(236, 251, 255)">alliance</text>
-                <text transform="translate(241,256)" font-size="5" style="fill:rgb(87, 0, 0)">powers</text>
-                <text transform="translate(396,372) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 5)">weakness</text>
-                <text transform="translate(225,149)" font-size="5" style="fill:rgb(101, 154, 255)">explore</text>
-                <text transform="translate(323,147)" font-size="5" style="fill:rgb(147, 198, 255)">unite</text>
-                <text transform="translate(247,125)" font-size="5" style="fill:rgb(255, 101, 57)">absolute</text>
-                <text transform="translate(183,235)" font-size="5" style="fill:rgb(44, 83, 255)">disease</text>
-                <text transform="translate(209,125)" font-size="5" style="fill:rgb(0, 0, 255)">endeavor</text>
-                <text transform="translate(109,223)" font-size="5" style="fill:rgb(80, 0, 0)">finished</text>
-                <text transform="translate(201,5)" font-size="5" style="fill:rgb(208, 0, 0)">weeks</text>
-                <text transform="translate(177,22)" font-size="5" style="fill:rgb(0, 0, 133)">adventure</text>
-                <text transform="translate(359,252) rotate(-90)" font-size="5" style="fill:rgb(98, 150, 255)">determination</text>
-                <text transform="translate(1,230)" font-size="5" style="fill:rgb(0, 0, 19)">key</text>
-                <text transform="translate(120,191)" font-size="5" style="fill:rgb(57, 101, 255)">large</text>
-                <text transform="translate(21,6)" font-size="5" style="fill:rgb(255, 228, 188)">rocket</text>
-                <text transform="translate(214,156) rotate(-90)" font-size="5" style="fill:rgb(17, 42, 255)">impressive</text>
-                <text transform="translate(57,176) rotate(-90)" font-size="5" style="fill:rgb(230, 249, 255)">guarantee</text>
-                <text transform="translate(255,92)" font-size="5" style="fill:rgb(0, 0, 175)">meaning</text>
-                <text transform="translate(120,5)" font-size="5" style="fill:rgb(136, 0, 0)">activities</text>
-                <text transform="translate(5,125) rotate(-90)" font-size="5" style="fill:rgb(255, 134, 84)">exploration</text>
-                <text transform="translate(67,318)" font-size="5" style="fill:rgb(214, 243, 255)">accelerate</text>
-                <text transform="translate(120,169)" font-size="5" style="fill:rgb(0, 0, 252)">larger</text>
-                <text transform="translate(142,151) rotate(-90)" font-size="5" style="fill:rgb(255, 219, 175)">exciting</text>
-                <text transform="translate(183,125)" font-size="5" style="fill:rgb(105, 0, 0)">weather</text>
-                <text transform="translate(295,125)" font-size="5" style="fill:rgb(198, 234, 255)">costs</text>
-                <text transform="translate(276,235)" font-size="5" style="fill:rgb(94, 0, 0)">committees</text>
-                <text transform="translate(395,152) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 0)">significance</text>
-                <text transform="translate(101,396)" font-size="5" style="fill:rgb(255, 219, 175)">affirmative</text>
-                <text transform="translate(265,70)" font-size="5" style="fill:rgb(31, 0, 0)">demands</text>
-                <text transform="translate(26,369)" font-size="5" style="fill:rgb(25, 56, 255)">personal</text>
-                <text transform="translate(240,276)" font-size="5" style="fill:rgb(0, 0, 255)">point</text>
-                <text transform="translate(395,231) rotate(-90)" font-size="5" style="fill:rgb(255, 0, 0)">pleasure</text>
-                <text transform="translate(258,319)" font-size="5" style="fill:rgb(255, 255, 255)">second</text>
-                <text transform="translate(146,264) rotate(-90)" font-size="5" style="fill:rgb(255, 212, 164)">visit</text>
-                <text transform="translate(241,326)" font-size="5" style="fill:rgb(38, 0, 0)">meeting</text>
-                <text transform="translate(7,214)" font-size="5" style="fill:rgb(247, 253, 255)">proving</text>
-                <text transform="translate(221,226) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 147)">table</text>
-                <text transform="translate(112,361)" font-size="5" style="fill:rgb(255, 251, 238)">response</text>
-                <text transform="translate(355,84)" font-size="5" style="fill:rgb(22, 0, 0)">tax</text>
-                <text transform="translate(1,146)" font-size="5" style="fill:rgb(255, 253, 244)">image</text>
-                <text transform="translate(120,184)" font-size="4" style="fill:rgb(94, 0, 0)">symington</text>
-                <text transform="translate(259,29)" font-size="4" style="fill:rgb(161, 209, 255)">rayburn</text>
-                <text transform="translate(309,318)" font-size="4" style="fill:rgb(60, 105, 255)">democrats</text>
-                <text transform="translate(196,203)" font-size="4" style="fill:rgb(80, 0, 0)">express</text>
-                <text transform="translate(34,318)" font-size="4" style="fill:rgb(233, 0, 0)">thanks</text>
-                </svg>
-            </div>
+        <select id="choose" onchange="myFunction(this.options[this.selectedIndex].value);"> 
+            <option value="triangle">Eisenhower</option>
+            <option value="square">Kennedy</option>
+            <option value="circle">Nixon</option>
+        </select>
+        <div class="triangle" id="triangle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+<style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,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")format("woff");}</style>
+<style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
+<rect width="100%" height="100%" style="fill:white"></rect>
+<text transform="translate(2,173)" font-size="44" style="fill:rgb(255, 24, 5)">recommendations<title> Word: recommendations
+Occurrences: 7
+Weight: 1.099</title></text>
+<text transform="translate(30,379)" font-size="44" style="fill:rgb(0, 0, 0)">civil<title> Word: civil
+Occurrences: 7
+Weight: 1.099</title></text>
+<text transform="translate(201,386) rotate(-90)" font-size="44" style="fill:rgb(255, 255, 255)">britain<title> Word: britain
+Occurrences: 7
+Weight: 1.099</title></text>
+<text transform="translate(265,238)" font-size="41" style="fill:rgb(168, 0, 0)">water<title> Word: water
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(119,32)" font-size="41" style="fill:rgb(0, 0, 188)">legislation<title> Word: legislation
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(17,134)" font-size="41" style="fill:rgb(0, 0, 28)">bombs<title> Word: bombs
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(100,101)" font-size="41" style="fill:rgb(140, 0, 0)">fissionable<title> Word: fissionable
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(24,219)" font-size="38" style="fill:rgb(5, 24, 255)">spring<title> Word: spring
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(29,259)" font-size="38" style="fill:rgb(255, 243, 214)">chance<title> Word: chance
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(207,310)" font-size="38" style="fill:rgb(255, 250, 233)">requires<title> Word: requires
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(225,359)" font-size="38" style="fill:rgb(0, 0, 126)">efforts<title> Word: efforts
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(190,131)" font-size="38" style="fill:rgb(164, 0, 0)">interest<title> Word: interest
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(202,263)" font-size="38" style="fill:rgb(0, 0, 185)">wage<title> Word: wage
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(23,337)" font-size="38" style="fill:rgb(0, 0, 126)">france<title> Word: france
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(193,56)" font-size="31" style="fill:rgb(150, 0, 0)">principally<title> Word: principally
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(261,198)" font-size="28" style="fill:rgb(255, 168, 115)">concrete<title> Word: concrete
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(24,53)" font-size="28" style="fill:rgb(133, 0, 0)">evidence<title> Word: evidence
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(52,283)" font-size="28" style="fill:rgb(255, 138, 87)">goals<title> Word: goals
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(230,381)" font-size="28" style="fill:rgb(0, 0, 119)">enterprise<title> Word: enterprise
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(119,188)" font-size="19" style="fill:rgb(255, 182, 129)">expenditures<title> Word: expenditures
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(380,123) rotate(-90)" font-size="19" style="fill:rgb(0, 0, 77)">urge<title> Word: urge
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(51,395)" font-size="19" style="fill:rgb(0, 0, 91)">reasonable<title> Word: reasonable
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(25,13)" font-size="19" style="fill:rgb(230, 249, 255)">area<title> Word: area
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(49,308)" font-size="19" style="fill:rgb(255, 65, 31)">financial<title> Word: financial
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(295,256)" font-size="19" style="fill:rgb(136, 0, 0)">bermuda<title> Word: bermuda
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(4,68)" font-size="19" style="fill:rgb(0, 0, 214)">therefore<title> Word: therefore
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(312,271)" font-size="19" style="fill:rgb(175, 0, 0)">facts<title> Word: facts
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(273,325)" font-size="19" style="fill:rgb(161, 209, 255)">destructive<title> Word: destructive
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(11,89)" font-size="19" style="fill:rgb(255, 14, 0)">fearful<title> Word: fearful
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(372,236)" font-size="19" style="fill:rgb(255, 105, 60)">mr<title> Word: mr
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(244,74)" font-size="17" style="fill:rgb(67, 114, 255)">found<title> Word: found
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(222,394)" font-size="17" style="fill:rgb(133, 0, 0)">formula<title> Word: formula
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(15,26)" font-size="17" style="fill:rgb(25, 0, 0)">revolution<title> Word: revolution
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(11,189)" font-size="17" style="fill:rgb(255, 65, 31)">republic<title> Word: republic
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(219,211)" font-size="17" style="fill:rgb(147, 0, 0)">alliances<title> Word: alliances
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(136,144)" font-size="17" style="fill:rgb(0, 0, 101)">attitudes<title> Word: attitudes
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(19,391) rotate(-90)" font-size="17" style="fill:rgb(38, 0, 0)">inflation<title> Word: inflation
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(16,293) rotate(-90)" font-size="17" style="fill:rgb(0, 0, 0)">particular<title> Word: particular
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(202,237)" font-size="17" style="fill:rgb(0, 0, 101)">local<title> Word: local
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(308,141)" font-size="13" style="fill:rgb(98, 150, 255)">partnership<title> Word: partnership
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(201,283)" font-size="13" style="fill:rgb(0, 0, 47)">creation<title> Word: creation
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(66,233)" font-size="13" style="fill:rgb(0, 0, 19)">mountains<title> Word: mountains
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(325,391)" font-size="13" style="fill:rgb(238, 251, 255)">possessed<title> Word: possessed
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(328,208)" font-size="13" style="fill:rgb(19, 0, 0)">negotiate<title> Word: negotiate
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(141,63)" font-size="13" style="fill:rgb(195, 232, 255)">avenue<title> Word: avenue
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(218,319)" font-size="13" style="fill:rgb(255, 0, 0)">powers<title> Word: powers
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(313,281)" font-size="13" style="fill:rgb(140, 192, 255)">acceptable<title> Word: acceptable
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(8,144)" font-size="13" style="fill:rgb(230, 249, 255)">contributions<title> Word: contributions
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(33,104)" font-size="13" style="fill:rgb(0, 0, 84)">strives<title> Word: strives
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(149,117)" font-size="11" style="fill:rgb(255, 5, 0)">weighs<title> Word: weighs
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(215,393) rotate(-90)" font-size="11" style="fill:rgb(205, 0, 0)">stubborn<title> Word: stubborn
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(139,279)" font-size="11" style="fill:rgb(255, 250, 233)">met<title> Word: met
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(170,200)" font-size="11" style="fill:rgb(25, 56, 255)">follow<title> Word: follow
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(216,330)" font-size="11" style="fill:rgb(182, 0, 0)">roads<title> Word: roads
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(29,348)" font-size="11" style="fill:rgb(0, 0, 101)">chose<title> Word: chose
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform<title> Word: form
+Occurrences: 2
+Weight: 1.099</title>="translate(23,289)" font-size="11" style="fill:rgb(0, 0, 227)">form<title> Word: form
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(163,74)" font-size="11" style="fill:rgb(255, 185, 133)">honest<title> Word: honest
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(24,278) rotate(-90)" font-size="11" style="fill:rgb(19, 47, 255)">energies<title> Word: energies
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(171,365) rotate(-90)" font-size="11" style="fill:rgb(255, 47, 19)">fruits<title> Word: fruits
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(337,68)" font-size="11" style="fill:rgb(154, 0, 0)">armies<title> Word: armies
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(72,346)" font-size="11" style="fill:rgb(0, 0, 105)">genuine<title> Word: genuine
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(68,291)" font-size="10" style="fill:rgb(175, 219, 255)">persuade<title> Word: persuade
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(307,333)" font-size="10" style="fill:rgb(255, 33, 11)">worst<title> Word: worst
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(8,129) rotate(-90)" font-size="10" style="fill:rgb(255, 0, 0)">spending<title> Word: spending
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(165,393)" font-size="10" style="fill:rgb(255, 239, 208)">serving<title> Word: serving
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(393,125) rotate(-90)" font-size="10" style="fill:rgb(0, 5, 255)">hospitals<title> Word: hospitals
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(133,286)" font-size="10" style="fill:rgb(255, 254, 250)">highway<title> Word: highway
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(381,268) rotate(-90)" font-size="10" style="fill:rgb(0, 0, 133)">homes<title> Word: homes
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(350,332)" font-size="10" style="fill:rgb(0, 0, 252)">calls<title> Word: calls
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(209,217)" font-size="10" style="fill:rgb(0, 0, 147)">answer<title> Word: answer
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(22,33)" font-size="10" style="fill:rgb(236, 251, 255)">stalin<title> Word: stalin
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(225,65)" font-size="10" style="fill:rgb(255, 228, 188)">sea<title> Word: sea
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(250,138)" font-size="9" style="fill:rgb(205, 0, 0)">confronts<title> Word: confronts
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(269,272)" font-size="9" style="fill:rgb(0, 0, 84)">gestures<title> Word: gestures
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(396,310) rotate(-90)" font-size="9" style="fill:rgb(185, 226, 255)">waits<title> Word: waits
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(292,395)" font-size="9" style="fill:rgb(0, 0, 41)">unions<title> Word: unions
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(151,312)" font-size="9" style="fill:rgb(211, 241, 255)">sincere<title> Word: sincere
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(136,127)" font-size="9" style="fill:rgb(154, 0, 0)">conclusion<title> Word: conclusion
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(98,108)" font-size="9" style="fill:rgb(0, 0, 84)">armistice<title> Word: armistice
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(72,9)" font-size="9" style="fill:rgb(14, 38, 255)">elections<title> Word: elections
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(170,47)" font-size="9" style="fill:rgb(205, 238, 255)">mean<title> Word: mean
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(137,267)" font-size="9" style="fill:rgb(41, 79, 255)">serious<title> Word: serious
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(182,337)" font-size="9" style="fill:rgb(217, 0, 0)">include<title> Word: include
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(280,179)" font-size="7" style="fill:rgb(19, 0, 0)">limitation<title> Word: limitation
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(11,52) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 84)">prohibition<title> Word: prohibition
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(326,179)" font-size="7" style="fill:rgb(255, 234, 198)">official<title> Word: official
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(27,389) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 126)">permanent<title> Word: permanent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(171,232)" font-size="7" style="fill:rgb(255, 188, 136)">costly<title> Word: costly
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(16,128) rotate(-90)" font-size="7" style="fill:rgb(77, 0, 0)">decades<title> Word: decades
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(24,267)" font-size="7" style="fill:rgb(147, 0, 0)">element<title> Word: element
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(263,283)" font-size="7" style="fill:rgb(112, 165, 255)">imperative<title> Word: imperative
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(339,74)" font-size="7" style="fill:rgb(255, 118, 70)">democratic<title> Word: democratic
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(111,60)" font-size="7" style="fill:rgb(236, 0, 0)">alert<title> Word: alert
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(29,74)" font-size="7" style="fill:rgb(236, 251, 255)">becomes<title> Word: becomes
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(219,95) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 230)">discovery<title> Word: discovery
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(219,193)" font-size="7" style="fill:rgb(0, 0, 0)">tomorrow<title> Word: tomorrow
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(332,396)" font-size="6" style="fill:rgb(255, 179, 126)">confederation<title> Word: confederation
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(89,98)" font-size="6" style="fill:rgb(255, 250, 233)">learn<title> Word: learn
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(2,395)" font-size="6" style="fill:rgb(0, 0, 233)">relationships<title> Word: relationships
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(289,106)" font-size="6" style="fill:rgb(136, 0, 0)">nationalism<title> Word: nationalism
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(205,269)" font-size="6" style="fill:rgb(255, 150, 98)">widespread<title> Word: widespread
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(43,194)" font-size="6" style="fill:rgb(0, 0, 129)">individuals<title> Word: individuals
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(111,212) rotate(-90)" font-size="6" style="fill:rgb(255, 9, 0)">persistent<title> Word: persistent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(395,273) rotate(-90)" font-size="6" style="fill:rgb(60, 105, 255)">particularly<title> Word: particularly
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(245,143)" font-size="6" style="fill:rgb(147, 0, 0)">pattern<title> Word: pattern
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(119,342)" font-size="6" style="fill:rgb(0, 9, 255)">forefathers<title> Word: forefathers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(353,6)" font-size="6" style="fill:rgb(255, 14, 0)">selfinterest<title> Word: selfinterest
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(388,362) rotate(-90)" font-size="6" style="fill:rgb(255, 33, 11)">proclaimed<title> Word: proclaimed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(210,223)" font-size="6" style="fill:rgb(150, 0, 0)">vigilant<title> Word: vigilant
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(206,318) rotate(-90)" font-size="6" style="fill:rgb(0, 0, 87)">fidelity<title> Word: fidelity
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(373,178)" font-size="6" style="fill:rgb(236, 0, 0)">uphold<title> Word: uphold
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(221,377) rotate(-90)" font-size="6" style="fill:rgb(38, 0, 0)">application<title> Word: application
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(23,301)" font-size="6" style="fill:rgb(0, 0, 217)">brought<title> Word: brought
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(137,233)" font-size="6" style="fill:rgb(25, 56, 255)">endangers<title> Word: endangers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(165,225) rotate(-90)" font-size="6" style="fill:rgb(0, 0, 221)">vigorously<title> Word: vigorously
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(24,274)" font-size="6" style="fill:rgb(157, 206, 255)">dynamic<title> Word: dynamic
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(255,105)" font-size="5" style="fill:rgb(0, 0, 22)">expanding<title> Word: expanding
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(224,71)" font-size="5" style="fill:rgb(0, 0, 63)">sound<title> Word: sound
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(286,158)" font-size="5" style="fill:rgb(0, 0, 0)">back<title> Word: back
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(112,138)" font-size="5" style="fill:rgb(0, 0, 19)">prices<title> Word: prices
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(211,104)" font-size="5" style="fill:rgb(25, 0, 0)">groups<title> Word: groups
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(21,222) rotate(-90)" font-size="5" style="fill:rgb(164, 0, 0)">departments<title> Word: departments
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(393,31) rotate(-90)" font-size="5" style="fill:rgb(101, 0, 0)">agencies<title> Word: agencies
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(60,262)" font-size="5" style="fill:rgb(0, 0, 77)">manpower<title> Word: manpower
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(15,175)" font-size="5" style="fill:rgb(115, 168, 255)">social<title> Word: social
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(178,5)" font-size="5" style="fill:rgb(112, 165, 255)">nationa<title> Word: nationa
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(244,365)" font-size="5" style="fill:rgb(255, 179, 126)">l</text>
+<text transform="translate(260,5)" font-size="5" style="fill:rgb(112, 165, 255)">inflationary<title> Word: inflationary
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(342,145)" font-size="5" style="fill:rgb(133, 185, 255)">tendencies<title> Word: tendencies
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(159,50)" font-size="5" style="fill:rgb(126, 179, 255)">unnecessary<title> Word: unnecessary
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(126,370)" font-size="5" style="fill:rgb(255, 244, 217)">demand<title> Word: demand
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(223,334)" font-size="5" style="fill:rgb(0, 0, 0)">benefits<title> Word: benefits
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(79,350)" font-size="5" style="fill:rgb(136, 0, 0)">improvements<title> Word: improvements
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(141,5)" font-size="5" style="fill:rgb(101, 0, 0)">purchasing<title> Word: purchasing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(330,242)" font-size="5" style="fill:rgb(255, 101, 57)">obvious<title> Word: obvious
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(24,232)" font-size="5" style="fill:rgb(255, 254, 250)">generally<title> Word: generally
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(395,361) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 233)">negotiations<title> Word: negotiations
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(118,65)" font-size="5" style="fill:rgb(255, 209, 161)">working<title> Word: working
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(214,26) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 255)">improved<title> Word: improved
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(43,364)" font-size="5" style="fill:rgb(0, 0, 252)">budget<title> Word: budget
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(95,30)" font-size="5" style="fill:rgb(0, 9, 255)">projects<title> Word: projects
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(111,312)" font-size="5" style="fill:rgb(19, 0, 0)">flood<title> Word: flood
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(216,5)" font-size="5" style="fill:rgb(255, 126, 77)">operation<title> Word: operation
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(100,13)" font-size="5" style="fill:rgb(255, 14, 0)">enacted<title> Word: enacted
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(279,143)" font-size="5" style="fill:rgb(224, 0, 0)">dealing<title> Word: dealing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(94,191) rotate(-90)" font-size="5" style="fill:rgb(255, 168, 115)">reason<title> Word: reason
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(184,343)" font-size="5" style="fill:rgb(0, 0, 255)">orderly<title> Word: orderly
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(254,177)" font-size="5" style="fill:rgb(255, 42, 17)">asserted<title> Word: asserted
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(82,209)" font-size="5" style="fill:rgb(255, 70, 34)">cases<title> Word: cases
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(312,65)" font-size="5" style="fill:rgb(0, 0, 244)">broad<title> Word: broad
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(140,68)" font-size="5" style="fill:rgb(250, 254, 255)">inquiry<title> Word: inquiry
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(347,285)" font-size="5" style="fill:rgb(25, 56, 255)">authorize<title> Word: authorize
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(156,369) rotate(-90)" font-size="5" style="fill:rgb(31, 65, 255)">defenses<title> Word: defenses
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(356,212)" font-size="5" style="fill:rgb(255, 182, 129)">recommend<title> Word: recommend
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(385,267) rotate(-90)" font-size="5" style="fill:rgb(255, 228, 188)">dependable<title> Word: dependable
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(113,193)" font-size="5" style="fill:rgb(255, 109, 63)">weakening<title> Word: weakening
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(176,105)" font-size="5" style="fill:rgb(8, 0, 0)">strains<title> Word: strains
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(317,145)" font-size="5" style="fill:rgb(255, 118, 70)">durable<title> Word: durable
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(24,107)" font-size="5" style="fill:rgb(185, 226, 255)">measures<title> Word: measures
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(50,312)" font-size="5" style="fill:rgb(133, 0, 0)">economies<title> Word: economies
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(253,36)" font-size="4" style="fill:rgb(161, 0, 0)">congressional<title> Word: congressional
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(31,352)" font-size="4" style="fill:rgb(255, 182, 129)">authorization<title> Word: authorization
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(317,300) rotate(-90)" font-size="4" style="fill:rgb(0, 0, 0)">shortly<title> Word: shortly
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(291,363)" font-size="4" style="fill:rgb(238, 251, 255)">information<title> Word: information
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(86,74)" font-size="4" style="fill:rgb(221, 0, 0)">requests<title> Word: requests
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(240,22)" font-size="4" style="fill:rgb(255, 138, 87)">link<title> Word: link
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(61,109)" font-size="4" style="fill:rgb(255, 0, 0)">independent<title> Word: independent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(187,290)" font-size="4" style="fill:rgb(87, 138, 255)">oil<title> Word: oil
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(182,281)" font-size="4" style="fill:rgb(0, 0, 205)">concept<title> Word: concept
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(151,105)" font-size="4" style="fill:rgb(0, 0, 112)">privilege<title> Word: privilege
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(109,146)" font-size="4" style="fill:rgb(224, 0, 0)">differing<title> Word: differing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(379,36)" font-size="4" style="fill:rgb(211, 241, 255)">defines<title> Word: defines
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(63,94)" font-size="4" style="fill:rgb(94, 0, 0)">meaning<title> Word: meaning
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(242,218)" font-size="4" style="fill:rgb(80, 130, 255)">summoned<title> Word: summoned
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(14,93)" font-size="4" style="fill:rgb(244, 0, 0)">fathers<title> Word: fathers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(296,385)" font-size="4" style="fill:rgb(84, 134, 255)">view<title> Word: view
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(29,293)" font-size="4" style="fill:rgb(244, 0, 0)">cherished<title> Word: cherished
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(123,263)" font-size="4" style="fill:rgb(255, 0, 0)">rules<title> Word: rules
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(106,372)" font-size="4" style="fill:rgb(122, 0, 0)">makes<title> Word: makes
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(327,362)" font-size="4" style="fill:rgb(5, 24, 255)">capital<title> Word: capital
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(138,364) rotate(-90)" font-size="4" style="fill:rgb(0, 0, 28)">soldier<title> Word: soldier
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(254,237)" font-size="4" style="fill:rgb(224, 247, 255)">farms<title> Word: farms
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(169,254)" font-size="4" style="fill:rgb(0, 0, 136)">factories<title> Word: factories
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(128,312)" font-size="4" style="fill:rgb(28, 61, 255)">proven<title> Word: proven
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(331,5)" font-size="4" style="fill:rgb(250, 254, 255)">thatin<title> Word: thatin
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(295,121)" font-size="4" style="fill:rgb(255, 42, 17)">try<title> Word: try
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(292,261)" font-size="4" style="fill:rgb(247, 0, 0)">stamina<title> Word: stamina
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(304,7)" font-size="4" style="fill:rgb(236, 0, 0)">series<title> Word: series
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(359,363)" font-size="4" style="fill:rgb(255, 65, 31)">ministers<title> Word: ministers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(256,62)" font-size="4" style="fill:rgb(0, 0, 255)">deliberations<title> Word: deliberations
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(77,295)" font-size="4" style="fill:rgb(255, 239, 208)">accomplishments<title> Word: accomplishments
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(167,397)" font-size="4" style="fill:rgb(255, 255, 255)">expectation<title> Word: expectation
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(304,21)" font-size="4" style="fill:rgb(0, 0, 19)">occasion<title> Word: occasion
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(114,93)" font-size="4" style="fill:rgb(168, 0, 0)">measure<title> Word: measure
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(60,223)" font-size="4" style="fill:rgb(14, 38, 255)">significance<title> Word: significance
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(56,334)" font-size="4" style="fill:rgb(0, 0, 105)">while<title> Word: while
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(397,99) rotate(-90)" font-size="4" style="fill:rgb(0, 0, 217)">equivalent<title> Word: equivalent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(202,207)" font-size="4" style="fill:rgb(255, 65, 31)">weapon<title> Word: weapon
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(25,225)" font-size="4" style="fill:rgb(255, 238, 205)">reactions<title> Word: reactions
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(31,385)" font-size="4" style="fill:rgb(182, 224, 255)">monopoly<title> Word: monopoly
+Occurrences: 2
+Weight: 1.099</title></text>
+</svg>
+    </div>
 
-        </body>
-    </html>
+
+        <div class="square" id="square">
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+<style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,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")format("woff");}</style>
+<style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
+<rect width="100%" height="100%" style="fill:white"></rect>
+<text transform="translate(211,309) rotate(-90)" font-size="64" style="fill:rgb(255, 9, 0)">catholic<title> Word: catholic
+Occurrences: 15
+Weight: 1.099</title></text>
+<text transform="translate(20,358)" font-size="51" style="fill:rgb(205, 238, 255)">university<title> Word: university
+Occurrences: 9
+Weight: 1.099</title></text>
+<text transform="translate(3,391)" font-size="42" style="fill:rgb(91, 0, 0)">additional<title> Word: additional
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(218,178)" font-size="42" style="fill:rgb(0, 0, 221)">dollars<title> Word: dollars
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(214,238)" font-size="38" style="fill:rgb(0, 0, 41)">platform<title> Word: platform
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(50,199)" font-size="38" style="fill:rgb(0, 0, 34)">soft<title> Word: soft
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(224,82)" font-size="34" style="fill:rgb(129, 182, 255)">senator<title> Word: senator
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(8,42)" font-size="34" style="fill:rgb(255, 198, 147)">coming<title> Word: coming
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(26,263)" font-size="34" style="fill:rgb(208, 0, 0)">fair<title> Word: fair
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(310,134)" font-size="34" style="fill:rgb(252, 254, 255)">deal<title> Word: deal
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(221,265)" font-size="34" style="fill:rgb(8, 28, 255)">election<title> Word: election
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(212,40)" font-size="31" style="fill:rgb(17, 42, 255)">protestant<title> Word: protestant
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(211,312)" font-size="24" style="fill:rgb(14, 38, 255)">massachusetts<title> Word: massachusetts
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(12,143)" font-size="24" style="fill:rgb(255, 255, 255)">odegaard<title> Word: odegaard
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(155,162) rotate(-90)" font-size="24" style="fill:rgb(255, 83, 44)">adversaries<title> Word: adversaries
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(12,286)" font-size="24" style="fill:rgb(233, 0, 0)">force<title> Word: force
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(13,85)" font-size="24" style="fill:rgb(255, 126, 77)">solution<title> Word: solution
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(16,304)" font-size="24" style="fill:rgb(0, 0, 91)">appeasement<title> Word: appeasement
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(12,220)" font-size="24" style="fill:rgb(255, 61, 28)">believes<title> Word: believes
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(281,286)" font-size="24" style="fill:rgb(255, 118, 70)">else<title> Word: else
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(218,199)" font-size="24" style="fill:rgb(255, 79, 41)">conclusion<title> Word: conclusion
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(228,98)" font-size="21" style="fill:rgb(188, 0, 0)">convention<title> Word: convention
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(8,102)" font-size="21" style="fill:rgb(255, 243, 214)">republican<title> Word: republican
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(278,389)" font-size="21" style="fill:rgb(8, 0, 0)">someone<title> Word: someone
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(102,320)" font-size="21" style="fill:rgb(205, 238, 255)">relevant<title> Word: relevant
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(214,140)" font-size="21" style="fill:rgb(255, 9, 0)">richard<title> Word: richard
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(229,116)" font-size="21" style="fill:rgb(255, 105, 60)">attend<title> Word: attend
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(155,276) rotate(-90)" font-size="21" style="fill:rgb(0, 0, 233)">catholics<title> Word: catholics
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(60,124)" font-size="21" style="fill:rgb(255, 219, 175)">died<title> Word: died
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(319,364)" font-size="21" style="fill:rgb(255, 255, 255)">bay<title> Word: bay
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(7,57)" font-size="18" style="fill:rgb(31, 0, 0)">graduates<title> Word: graduates
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(12,166)" font-size="18" style="fill:rgb(0, 0, 208)">percent<title> Word: percent
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(380,98) rotate(-90)" font-size="18" style="fill:rgb(50, 0, 0)">send<title> Word: send
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(281,322)" font-size="18" style="fill:rgb(252, 0, 0)">answer<title> Word: answer
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(219,290)" font-size="18" style="fill:rgb(133, 185, 255)">lack<title> Word: lack
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(13,326)" font-size="18" style="fill:rgb(202, 236, 255)">talk<title> Word: talk
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(226,54)" font-size="18" style="fill:rgb(255, 172, 119)">inspire<title> Word: inspire
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(332,332)" font-size="18" style="fill:rgb(255, 222, 178)">among<title> Word: among
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(10,18)" font-size="18" style="fill:rgb(14, 38, 255)">vital<title> Word: vital
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(313,147)" font-size="16" style="fill:rgb(255, 109, 63)">nothing<title> Word: nothing
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(98,280)" font-size="16" style="fill:rgb(185, 226, 255)">dare<title> Word: dare
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(1,192)" font-size="16" style="fill:rgb(0, 0, 8)">join<title> Word: join
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(337,281)" font-size="16" style="fill:rgb(255, 253, 244)">begin<title> Word: begin
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(381,385) rotate(-90)" font-size="16" style="fill:rgb(255, 14, 0)">gives<title> Word: gives
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(164,176) rotate(-90)" font-size="16" style="fill:rgb(0, 0, 84)">propose<title> Word: propose
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(249,14)" font-size="16" style="fill:rgb(227, 248, 255)">worldwide<title> Word: worldwide
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(392,89) rotate(-90)" font-size="16" style="fill:rgb(91, 0, 0)">asset<title> Word: asset
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(168,284) rotate(-90)" font-size="16" style="fill:rgb(147, 198, 255)">higher<title> Word: higher
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(326,206)" font-size="13" style="fill:rgb(87, 138, 255)">governor<title> Word: governor
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(30,230)" font-size="13" style="fill:rgb(224, 247, 255)">stevenson<title> Word: stevenson
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(90,11)" font-size="13" style="fill:rgb(188, 228, 255)">butler<title> Word: butler
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(303,50)" font-size="12" style="fill:rgb(0, 0, 227)">humphrey<title> Word: humphrey
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(99,156)" font-size="12" style="fill:rgb(255, 212, 164)">name<title> Word: name
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(394,396) rotate(-90)" font-size="12" style="fill:rgb(250, 254, 255)">nomination<title> Word: nomination
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(6,117)" font-size="12" style="fill:rgb(105, 0, 0)">dignity<title> Word: dignity
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(249,371)" font-size="12" style="fill:rgb(255, 252, 241)">render<title> Word: render
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(158,82)" font-size="12" style="fill:rgb(0, 9, 255)">facing<title> Word: facing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(338,12)" font-size="12" style="fill:rgb(38, 0, 0)">account<title> Word: account
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(168,52) rotate(-90)" font-size="12" style="fill:rgb(0, 0, 0)">telling<title> Word: telling
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(94,236)" font-size="12" style="fill:rgb(195, 232, 255)">career<title> Word: career
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(334,342)" font-size="12" style="fill:rgb(230, 0, 0)">voted<title> Word: voted
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(98,260)" font-size="12" style="fill:rgb(73, 122, 255)">known<title> Word: known
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(66,322)" font-size="12" style="fill:rgb(202, 236, 255)">fit<title> Word: fit
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(101,67)" font-size="12" style="fill:rgb(202, 236, 255)">bold<title> Word: bold
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(220,123) rotate(-90)" font-size="12" style="fill:rgb(255, 230, 192)">franklin<title> Word: franklin
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(186,176)" font-size="12" style="fill:rgb(255, 172, 119)">farm<title> Word: farm
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(89,165)" font-size="12" style="fill:rgb(255, 251, 238)">medical<title> Word: medical
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(1,151)" font-size="11" style="fill:rgb(211, 241, 255)">darkness<title> Word: darkness
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(27,175)" font-size="11" style="fill:rgb(255, 142, 91)">safe<title> Word: safe
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(203,320)" font-size="11" style="fill:rgb(28, 61, 255)">taking<title> Word: taking
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(392,295) rotate(-90)" font-size="11" style="fill:rgb(233, 0, 0)">changing<title> Word: changing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(302,293)" font-size="9" style="fill:rgb(25, 0, 0)">population<title> Word: population
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(235,272)" font-size="9" style="fill:rgb(255, 142, 91)">onethird<title> Word: onethird
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(259,212)" font-size="9" style="fill:rgb(171, 217, 255)">ends<title> Word: ends
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(280,396)" font-size="9" style="fill:rgb(255, 255, 255)">threats<title> Word: threats
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(8,366) rotate(-90)" font-size="9" style="fill:rgb(202, 236, 255)">explosion<title> Word: explosion
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(8,269) rotate(-90)" font-size="9" style="fill:rgb(250, 254, 255)">replacing<title> Word: replacing
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(363,113) rotate(-90)" font-size="9" style="fill:rgb(255, 142, 91)">pioneers<title> Word: pioneers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(119,245)" font-size="9" style="fill:rgb(255, 212, 164)">won<title> Word: won
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(18,263) rotate(-90)" font-size="9" style="fill:rgb(31, 0, 0)">promised<title> Word: promised
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(84,18)" font-size="8" style="fill:rgb(214, 243, 255)">mediocrity<title> Word: mediocrity
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(54,173)" font-size="8" style="fill:rgb(255, 255, 255)">regardless<title> Word: regardless
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(371,190)" font-size="8" style="fill:rgb(19, 47, 255)">tired<title> Word: tired
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(175,109)" font-size="8" style="fill:rgb(0, 0, 31)">tory<title> Word: tory
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(242,147)" font-size="8" style="fill:rgb(224, 247, 255)">harsh<title> Word: harsh
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(1,68)" font-size="8" style="fill:rgb(80, 130, 255)">rhetoric<title> Word: rhetoric
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(352,396)" font-size="8" style="fill:rgb(0, 0, 185)">wait<title> Word: wait
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(120,119)" font-size="8" style="fill:rgb(241, 0, 0)">lord<title> Word: lord
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(251,376)" font-size="8" style="fill:rgb(0, 0, 221)">weary<title> Word: weary
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(351,212)" font-size="7" style="fill:rgb(217, 0, 0)">responsible<title> Word: responsible
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(223,19)" font-size="7" style="fill:rgb(0, 0, 60)">denied<title> Word: denied
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(262,292)" font-size="7" style="fill:rgb(41, 79, 255)">religion<title> Word: religion
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(126,326)" font-size="7" style="fill:rgb(91, 0, 0)">churches<title> Word: churches
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(186,47)" font-size="7" style="fill:rgb(255, 47, 19)">acts<title> Word: acts
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(124,286)" font-size="7" style="fill:rgb(14, 0, 0)">treated<title> Word: treated
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(266,122)" font-size="7" style="fill:rgb(255, 254, 250)">someday<title> Word: someday
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(60,7)" font-size="7" style="fill:rgb(0, 0, 221)">baptist<title> Word: baptist
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(8,197)" font-size="7" style="fill:rgb(205, 0, 0)">statute<title> Word: statute
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(336,17)" font-size="7" style="fill:rgb(44, 0, 0)">protestants<title> Word: protestants
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(172,195)" font-size="7" style="fill:rgb(255, 42, 17)">favor<title> Word: favor
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(56,63)" font-size="7" style="fill:rgb(255, 255, 255)">working<title> Word: working
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(167,364)" font-size="7" style="fill:rgb(161, 209, 255)">subvert<title> Word: subvert
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(49,269)" font-size="7" style="fill:rgb(0, 0, 129)">forefathers<title> Word: forefathers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(216,210)" font-size="7" style="fill:rgb(255, 126, 77)">alamo<title> Word: alamo
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(395,150) rotate(-90)" font-size="7" style="fill:rgb(140, 0, 0)">quotations<title> Word: quotations
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(253,385)" font-size="7" style="fill:rgb(0, 0, 126)">deny<title> Word: deny
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(138,88) rotate(-90)" font-size="7" style="fill:rgb(255, 238, 205)">accordance<title> Word: accordance
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(322,59)" font-size="7" style="fill:rgb(34, 0, 0)">violate<title> Word: violate
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(326,396)" font-size="7" style="fill:rgb(67, 114, 255)">born<title> Word: born
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(371,103)" font-size="7" style="fill:rgb(255, 79, 41)">guided<title> Word: guided
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(263,344) rotate(-90)" font-size="7" style="fill:rgb(11, 0, 0)">beacon<title> Word: beacon
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(360,318)" font-size="7" style="fill:rgb(60, 105, 255)">counseled<title> Word: counseled
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(47,236)" font-size="7" style="fill:rgb(0, 0, 0)">colony<title> Word: colony
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(182,201)" font-size="7" style="fill:rgb(0, 0, 133)">ones<title> Word: ones
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(168,326)" font-size="7" style="fill:rgb(255, 96, 53)">mistakes<title> Word: mistakes
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(310,372)" font-size="7" style="fill:rgb(221, 0, 0)">enough<title> Word: enough
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(307,104)" font-size="7" style="fill:rgb(84, 134, 255)">referred<title> Word: referred
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(330,348)" font-size="7" style="fill:rgb(0, 0, 175)">education<title> Word: education
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(282,206)" font-size="7" style="fill:rgb(255, 254, 250)">picture<title> Word: picture
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(7,310) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 233)">infinitely<title> Word: infinitely
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(185,229)" font-size="7" style="fill:rgb(217, 0, 0)">tangled<title> Word: tangled
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(18,364) rotate(-90)" font-size="7" style="fill:rgb(255, 47, 19)">overnight<title> Word: overnight
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(171,138) rotate(-90)" font-size="7" style="fill:rgb(0, 0, 171)">neutral<title> Word: neutral
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(86,287)" font-size="7" style="fill:rgb(0, 0, 164)">unable<title> Word: unable
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(107,266)" font-size="7" style="fill:rgb(255, 28, 8)">abandon<title> Word: abandon
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(157,86)" font-size="6" style="fill:rgb(38, 74, 255)">processes<title> Word: processes
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(204,364) rotate(-90)" font-size="6" style="fill:rgb(0, 9, 255)">ideals<title> Word: ideals
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(187,271)" font-size="6" style="fill:rgb(255, 83, 44)">reason<title> Word: reason
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(210,270)" font-size="6" style="fill:rgb(38, 0, 0)">quick<title> Word: quick
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(144,396)" font-size="6" style="fill:rgb(247, 253, 255)">solutions<title> Word: solutions
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(212,7)" font-size="6" style="fill:rgb(70, 118, 255)">maturity<title> Word: maturity
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(184,207)" font-size="6" style="fill:rgb(255, 28, 8)">gone<title> Word: gone
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(39,396)" font-size="6" style="fill:rgb(255, 255, 255)">communism<title> Word: communism
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(265,278)" font-size="6" style="fill:rgb(255, 245, 221)">urge<title> Word: urge
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(206,325)" font-size="6" style="fill:rgb(0, 0, 34)">pathway<title> Word: pathway
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(102,225)" font-size="6" style="fill:rgb(221, 0, 0)">prevailed<title> Word: prevailed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(297,19)" font-size="6" style="fill:rgb(0, 0, 205)">firmness<title> Word: firmness
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(219,396)" font-size="6" style="fill:rgb(0, 0, 185)">surrender<title> Word: surrender
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(87,396)" font-size="6" style="fill:rgb(84, 134, 255)">holocaust<title> Word: holocaust
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(137,33) rotate(-90)" font-size="6" style="fill:rgb(255, 142, 91)">regards<title> Word: regards
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(180,394)" font-size="5" style="fill:rgb(255, 252, 241)">warmongers<title> Word: warmongers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(5,124)" font-size="5" style="fill:rgb(205, 238, 255)">appeasers<title> Word: appeasers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(285,326)" font-size="5" style="fill:rgb(255, 65, 31)">unaccompanied<title> Word: unaccompanied
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(215,294)" font-size="5" style="fill:rgb(255, 118, 70)">rightfully<title> Word: rightfully
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(186,68)" font-size="5" style="fill:rgb(0, 0, 34)">wars<title> Word: wars
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(268,58)" font-size="5" style="fill:rgb(0, 0, 192)">agreement<title> Word: agreement
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(21,363)" font-size="5" style="fill:rgb(0, 0, 87)">century<title> Word: century
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(20,202)" font-size="5" style="fill:rgb(255, 5, 0)">forms<title> Word: forms
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(286,166)" font-size="5" style="fill:rgb(101, 154, 255)">word<title> Word: word
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(337,110)" font-size="5" style="fill:rgb(67, 0, 0)">friend<title> Word: friend
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(125,381)" font-size="5" style="fill:rgb(73, 0, 0)">foe<title> Word: foe
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(315,171) rotate(-90)" font-size="5" style="fill:rgb(84, 134, 255)">passed<title> Word: passed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(258,390)" font-size="5" style="fill:rgb(0, 0, 5)">oppose<title> Word: oppose
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(352,241)" font-size="5" style="fill:rgb(0, 0, 53)">assure<title> Word: assure
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(172,115)" font-size="5" style="fill:rgb(255, 101, 57)">little<title> Word: little
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(56,326)" font-size="5" style="fill:rgb(255, 238, 205)">alliance<title> Word: alliance
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(183,279)" font-size="5" style="fill:rgb(161, 209, 255)">powers<title> Word: powers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(267,242)" font-size="5" style="fill:rgb(0, 0, 188)">weakness<title> Word: weakness
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(72,147)" font-size="5" style="fill:rgb(0, 0, 87)">explore<title> Word: explore
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(105,327)" font-size="5" style="fill:rgb(57, 101, 255)">unite<title> Word: unite
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(233,182)" font-size="5" style="fill:rgb(73, 122, 255)">absolute<title> Word: absolute
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(225,108) rotate(-90)" font-size="5" style="fill:rgb(255, 9, 0)">disease<title> Word: disease
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(217,59)" font-size="5" style="fill:rgb(73, 0, 0)">endeavor<title> Word: endeavor
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(54,308)" font-size="5" style="fill:rgb(255, 228, 188)">finished<title> Word: finished
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(115,250)" font-size="5" style="fill:rgb(188, 0, 0)">weeks<title> Word: weeks
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(3,396)" font-size="5" style="fill:rgb(0, 0, 129)">adventure<title> Word: adventure
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(326,151)" font-size="5" style="fill:rgb(8, 0, 0)">determination<title> Word: determination
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(187,285)" font-size="5" style="fill:rgb(53, 96, 255)">key<title> Word: key
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(165,155)" font-size="5" style="fill:rgb(122, 175, 255)">large<title> Word: large
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(309,269)" font-size="5" style="fill:rgb(255, 51, 22)">rocket<title> Word: rocket
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(109,106)" font-size="5" style="fill:rgb(255, 248, 227)">impressive<title> Word: impressive
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(84,257) rotate(-90)" font-size="5" style="fill:rgb(34, 0, 0)">guarantee<title> Word: guarantee
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(4,174)" font-size="5" style="fill:rgb(80, 130, 255)">meaning<title> Word: meaning
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(173,69) rotate(-90)" font-size="5" style="fill:rgb(221, 0, 0)">activities<title> Word: activities
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(159,225) rotate(-90)" font-size="5" style="fill:rgb(227, 248, 255)">exploration<title> Word: exploration
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(285,182)" font-size="5" style="fill:rgb(244, 0, 0)">accelerate<title> Word: accelerate
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(254,349)" font-size="5" style="fill:rgb(255, 5, 0)">larger<title> Word: larger
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(195,25) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 53)">exciting<title> Word: exciting
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(82,106)" font-size="5" style="fill:rgb(255, 126, 77)">weather<title> Word: weather
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(182,156)" font-size="5" style="fill:rgb(255, 185, 133)">costs<title> Word: costs
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(223,120)" font-size="5" style="fill:rgb(221, 0, 0)">committees<title> Word: committees
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(22,256) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 98)">significance<title> Word: significance
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(96,203)" font-size="5" style="fill:rgb(255, 172, 119)">affirmative<title> Word: affirmative
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(253,396)" font-size="5" style="fill:rgb(0, 0, 227)">demands<title> Word: demands
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(210,148)" font-size="5" style="fill:rgb(255, 5, 0)">personal<title> Word: personal
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(362,51)" font-size="5" style="fill:rgb(255, 230, 192)">point<title> Word: point
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(78,308)" font-size="5" style="fill:rgb(3, 19, 255)">pleasure<title> Word: pleasure
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(93,240)" font-size="5" style="fill:rgb(98, 150, 255)">second<title> Word: second
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(188,138)" font-size="5" style="fill:rgb(0, 0, 192)">visit<title> Word: visit
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(131,147) rotate(-90)" font-size="5" style="fill:rgb(255, 212, 164)">meeting<title> Word: meeting
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(204,363)" font-size="5" style="fill:rgb(252, 0, 0)">proving<title> Word: proving
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(230,341)" font-size="5" style="fill:rgb(205, 238, 255)">table<title> Word: table
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(98,385) rotate(-90)" font-size="5" style="fill:rgb(255, 109, 63)">response<title> Word: response
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(264,320)" font-size="5" style="fill:rgb(0, 0, 129)">tax<title> Word: tax
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(169,233)" font-size="5" style="fill:rgb(0, 0, 91)">image<title> Word: image
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(72,204)" font-size="4" style="fill:rgb(175, 0, 0)">symington<title> Word: symington
+Occurrences: 1
+Weight: 1.099</title></text>
+<text transform="translate(33,180)" font-size="4" style="fill:rgb(255, 47, 19)">rayburn<title> Word: rayburn
+Occurrences: 1
+Weight: 1.099</title></text>
+<text transform="translate(38,348) rotate(-90)" font-size="4" style="fill:rgb(255, 226, 185)">democrats<title> Word: democrats
+Occurrences: 1
+Weight: 1.099</title></text>
+<text transform="translate(284,349)" font-size="4" style="fill:rgb(255, 255, 255)">express<title> Word: express
+Occurrences: 1
+Weight: 1.099</title></text>
+<text transform="translate(356,167)" font-size="4" style="fill:rgb(60, 0, 0)">thanks<title> Word: thanks
+Occurrences: 1
+Weight: 1.099</title></text>
+</svg>
+    </div>
+
+<div class="circle" id="circle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+<style>@font-face{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;src:url("data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAmwAAsAAAAAC+wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABeAAAAFYAAABgfZl2PWNtYXAAAAIIAAAALAAAADQADADNZ2FzcAAACaQAAAAMAAAADAAEAAdnbHlmAAACbAAABlMAAAgcg5ZofGhlYWQAAAEIAAAANgAAADYFGC7taGhlYQAAAUAAAAAgAAAAJAw9AuhobXR4AAAB0AAAADgAAAA4C5gIoGxvY2EAAAI0AAAAOAAAADgcIR3mbWF4cAAAAWAAAAAYAAAAIAAfADhuYW1lAAAIwAAAAMsAAAFoHBo1AHBvc3QAAAmMAAAAFgAAACD/aQBnAAEAAAABAACSVSXPXw889QALCAAAAAAAwcfpVAAAAADfY/xo//z+FATRBh8AAAAJAAIAAAAAAAB4nGNgZGBgz/0ny8DAcvb/n/9/WC4yAEVQACMArNsHL3icY2BkYGCQZjBnYGYAAUYGNAAACM0AWHicY2BmOcs4gYGVgYN1FqsxAwOjHIRmvsCQxviJgYGJm42TmYOFiYmFASjJgAQMHYOdGRwYEhmq2OT/iTC0sOcyPlZgYJwPkmPxYt0GpBQYGABZawy/AAAEzQDBAIcAngCsAIkAhQCcAGYAoADFAIcA1wC8AFwAoABzAJ4AiQEIAMsAiwCgAFL//ABgAFIAtnicY2BgYGJgYGAGYhEgyQimWRgUgDQLEIL4Vf//A8nE////LwDzGQBW4AbWAAAAAAA0AGQAigC7AOcBDAFaAXoBnQHEAeUB/AIsAkoCcwKkAtUC8wMiA0UDZAN/A68DzgP3BA54nFVVC0wUVxR9d2ac3SKRHXZmtwYbGKYLoUgsOyxbbfFTNbErpi1BpMaarSJ+aLSC1uDGIDUrpVtjEUSK1fILbaLFauiktPRD1m+JElKpxiallmpjQ9VYm/rZefa+XVSazG+Tveee+znnEY7UPBgVOGE5cRKVEDVdE0UtNc1jc3k9OVqqJT1XdzsUibeIoiLr7lwPX+WyLmrb3t4DtP92/Rezjn890t/ddrzjdP2RpjcWHt4P+TbL/NGCWn/X96aNm2yxlq0/1t5AOHIQ88wTZZJIphDi0iyapEuyRUf8RMnGaam87NBTJJuaKkJhvCtoWK1lF85cuXp6oCLUBDZ6ff/OUEiU6buv1nXQIXqb3qI/cs+P9EEnHOwlBMhhxHdhHXb8YUnTGJTbq4haCpFsRHULrpmNb9NdsPZAx84wfUB/h1SwHBO0g9PpSrpuZkseaGCDyZBGkGstYk2Lcn2KccWOcJItUXc79TQP0tZ4T85Yhly+2rpxkPE8tyk+3qjXQk30JiQ2Bes/gUyIh0mQ1VKtQvfdUbiXMdJHl9IVR1mGIGZYgGwl4kC+amKMayrjig1RXKpNTREWRO5Z4ZXwkc6T/9BLkDBy3oxQLo/epH9xHK3Nb1mIKUSIAy+9PaxBNuvCR4QIS8VkojBUSZNUj8uTgz12YktSRUVRBZkGDBqGvO7B6kDGmtWBYgjyfZFZfN961d/Xpe2eUlKxhhCelFJZKEWGT5OpJBfRFItDkZFiOlsEthQ4qjRPjjd6p8WS8G62NIoM7KGmYJeE0uNzhr71Jpe0ft31pdl/aeSmP/ha6dCJotnNw5cvw/zeq5AAoRLBtzFp8fbW78TnFhU276Y1rXXnZ0wre+sV16FVxgnZ7L1649YIjT/ZNVycx6pswSqzcD4Sbqxkw0lIbJvYMuEnv+U6PWsY1rjV1yDIhUGg5eYp3Bz3B5/SDabOun8C43VxErHihAm4o3V5cuwujypNULBlXOW6WZllCfRvCIM/sgeKxUnlM6ZXlJuHlUBkvhwIyAylhsp8EaJYUDtRFAYCHgeTicSwGCz3R1nZOhq3c//mHXQZt/S3cx2IVVFRfiejOb18lTBdCdyf0x3Gmi4gJ1xwMgmxvKAD7qMlWhYPVTUQ+oUmcnFDtKi6u9vGZTRBLXWZdXCngC4VZTOXDiMCykDIRIQnEOFxKTK9Ha2iDoonBJWt9wJR+kCW4b8rcL4prIc50e3AdLaxt+5kyow+mPwHPTOXvNy6rXBBW1VS3Nyd7W4xf/f2TVx4T3ln2GxjTf74hnlK8DV8ahg9F7HJYzNCfNv4GTnHj6g+6X8jYtHRAXGkAtVRjLETmZonjKmCPdOZ6PDmVlyk1yDh6iVw0Ou/Qi49TftlbJsAFniW/oD6/pee2wcd0EL9dBlzH9zmeYg4pmjH4xrH3EcZbz8o5CTr+vPj7acpGKpWaaaYiyQf2k9JRsx/Po96BmaY9jAD6F60CSnH+9g77OM8o9KaVG/Ex8eMg2WIeQZvNNz9AYYyqh95h/nRI9MAsGJHtVhHwZI2blBYhaBlB1a1HzUaHNb8rqq3hezOrJ4j5ueC78yWUqaY/jGXTybEixvKpJn+ULUMC8t3OmIC7+87CvYVR69VDp84eegFo3Z0lfFj6M+f7mR3FrVNL5y9pG7lu/t9excE816as2jvm42HED3E0CdsYNNyMcuVmO/YdUlVUAS6m4+8s5U20n9g4qK1YFDf9683vpcCxdy25dmQTH+uNXeEo6pGlCzBF1U1nkMMRpdsUTWhCpqT4tZeoZXGaGuDgeZax50182ik5zw3477BoguwO5UYPRGjQbc7sC92O8roFvX33lycIFqW3/iG+gWfuemP5VNhMvc+hsGDCEYNYtRkjOJ5jV2xWK/90Zvns3bME+fUfDPctiLVKSa7gn1VmU+KyU+VHrzMFYKPHmONNi9/NdDzGfei+W24/dY+LjnGyo/462KsgIk6qmu8KN0ygCeQNkA3w4FzuLFnBjidc9JSaDavmWehm+azmnCnWE14RmApY3SAndDpUZvxegt6QSywiM65WJxr7rEDRQUzff6yZ2Ygn/Kzi9/qxjLTu45IdfEFJY2MD5ISZEREj1BVD6geVQE8EyJtXIO5i880K7kPt/HzavdEBsl/f1GGOAB4nH2OQQ7BUBRFD4qYWICB/AUgisRYSIxMSAzMqqSaSCvFgAVYgU3YiQVZgNvvS4ykuc1979133geqrChR8GrATvr4Ak1VH1+kzs35EgPuzns/mTItns5XaPBiQkwknaQrWzYYKVAdyIWkHLiQ2dROXcND6tHVNxTNMFUm1XSvbcNYPtNO/g8sNSWhozuZXGz5C00SjnIzO02ZazfiLEag3EizUJ1E6a1qQ1v6T1ja5NHdM/i6mb/RsBY3Fnljuz79H9KX4yhvK1I1NwB4nGNgZgCD/2kMaUCKkQENAAAp/gHQAAAAAAACAAUAAv//AAM=")format("woff");}</style>
+<style>text{font-family:'Droid Sans Mono';font-weight:normal;font-style:normal;}</style>
+<rect width="100%" height="100%" style="fill:white"></rect>
+<text transform="translate(320,235) rotate(-90)" font-size="64" style="fill:rgb(17, 42, 255)">south<title> Word: south
+Occurrences: 28
+Weight: 1.099</title></text>
+<text transform="translate(72,338)" font-size="53" style="fill:rgb(0, 0, 0)">withdrawal<title> Word: withdrawal
+Occurrences: 18
+Weight: 1.099</title></text>
+<text transform="translate(78,376)" font-size="44" style="fill:rgb(0, 0, 0)">vietnamese<title> Word: vietnamese
+Occurrences: 12
+Weight: 1.099</title></text>
+<text transform="translate(164,136)" font-size="38" style="fill:rgb(255, 236, 202)">north<title> Word: north
+Occurrences: 9
+Weight: 1.099</title></text>
+<text transform="translate(131,33)" font-size="38" style="fill:rgb(255, 219, 175)">federal<title> Word: federal
+Occurrences: 9
+Weight: 1.099</title></text>
+<text transform="translate(76,215)" font-size="36" style="fill:rgb(122, 0, 0)">paris<title> Word: paris
+Occurrences: 8
+Weight: 1.099</title></text>
+<text transform="translate(208,265)" font-size="36" style="fill:rgb(230, 0, 0)">voices<title> Word: voices
+Occurrences: 8
+Weight: 1.099</title></text>
+<text transform="translate(35,166)" font-size="34" style="fill:rgb(227, 248, 255)">theyre<title> Word: theyre
+Occurrences: 7
+Weight: 1.099</title></text>
+<text transform="translate(58,329) rotate(-90)" font-size="32" style="fill:rgb(217, 0, 0)">combat<title> Word: combat
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(34,102)" font-size="32" style="fill:rgb(105, 0, 0)">timetable<title> Word: timetable
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(7,60)" font-size="32" style="fill:rgb(70, 118, 255)">development<title> Word: development
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(64,262)" font-size="32" style="fill:rgb(0, 0, 60)">special<title> Word: special
+Occurrences: 6
+Weight: 1.099</title></text>
+<text transform="translate(353,239) rotate(-90)" font-size="29" style="fill:rgb(0, 0, 233)">nomination<title> Word: nomination
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(39,125)" font-size="29" style="fill:rgb(150, 0, 0)">defeat<title> Word: defeat
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(386,244) rotate(-90)" font-size="29" style="fill:rgb(205, 238, 255)">precipitate<title> Word: precipitate
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(116,288)" font-size="29" style="fill:rgb(0, 0, 70)">reform<title> Word: reform
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(238,287)" font-size="29" style="fill:rgb(255, 219, 175)">privacy<title> Word: privacy
+Occurrences: 5
+Weight: 1.099</title></text>
+<text transform="translate(177,183)" font-size="26" style="fill:rgb(0, 0, 161)">theres<title> Word: theres
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(21,334) rotate(-90)" font-size="26" style="fill:rgb(208, 0, 0)">congratulate<title> Word: congratulate
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(10,357)" font-size="26" style="fill:rgb(0, 0, 17)">cant<title> Word: cant
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(3,19)" font-size="26" style="fill:rgb(154, 0, 0)">attorney<title> Word: attorney
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(289,23)" font-size="26" style="fill:rgb(0, 0, 19)">january<title> Word: january
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(187,217)" font-size="26" style="fill:rgb(0, 0, 17)">effect<title> Word: effect
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(80,394)" font-size="23" style="fill:rgb(175, 0, 0)">communists<title> Word: communists
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(268,394)" font-size="23" style="fill:rgb(255, 212, 164)">withdraw<title> Word: withdraw
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(160,154)" font-size="23" style="fill:rgb(0, 0, 17)">fronts<title> Word: fronts
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(86,232)" font-size="22" style="fill:rgb(255, 244, 217)">letters<title> Word: letters
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(22,190)" font-size="21" style="fill:rgb(108, 161, 255)">accordance<title> Word: accordance
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(141,73)" font-size="17" style="fill:rgb(0, 0, 233)">infiltration<title> Word: infiltration
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(9,387)" font-size="17" style="fill:rgb(255, 24, 5)">simple<title> Word: simple
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(217,96)" font-size="17" style="fill:rgb(255, 165, 112)">felt<title> Word: felt
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(62,138)" font-size="16" style="fill:rgb(217, 244, 255)">colleagues<title> Word: colleagues
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(318,37)" font-size="16" style="fill:rgb(171, 217, 255)">senate<title> Word: senate
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(358,50)" font-size="16" style="fill:rgb(230, 0, 0)">farm<title> Word: farm
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(392,305) rotate(-90)" font-size="16" style="fill:rgb(255, 65, 31)">trade<title> Word: trade
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(182,230)" font-size="16" style="fill:rgb(255, 88, 47)">particular<title> Word: particular
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(28,32)" font-size="16" style="fill:rgb(0, 0, 8)">historic<title> Word: historic
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(246,301)" font-size="16" style="fill:rgb(0, 0, 126)">members<title> Word: members
+Occurrences: 4
+Weight: 1.099</title></text>
+<text transform="translate(36,73)" font-size="14" style="fill:rgb(247, 0, 0)">convention<title> Word: convention
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(218,53)" font-size="14" style="fill:rgb(255, 236, 202)">running<title> Word: running
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(16,134) rotate(-90)" font-size="14" style="fill:rgb(0, 0, 5)">governor<title> Word: governor
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(29,115) rotate(-90)" font-size="14" style="fill:rgb(0, 0, 0)">choice<title> Word: choice
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(58,283)" font-size="14" style="fill:rgb(0, 0, 255)">answers<title> Word: answers
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(204,165)" font-size="14" style="fill:rgb(255, 126, 77)">honorable<title> Word: honorable
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(283,242)" font-size="14" style="fill:rgb(3, 0, 0)">commit<title> Word: commit
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(6,366)" font-size="12" style="fill:rgb(168, 214, 255)">training<title> Word: training
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(340,362)" font-size="12" style="fill:rgb(255, 142, 91)">johnsons<title> Word: johnsons
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(183,192)" font-size="12" style="fill:rgb(70, 118, 255)">launched<title> Word: launched
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(362,245) rotate(-90)" font-size="12" style="fill:rgb(122, 0, 0)">equipment<title> Word: equipment
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(21,206)" font-size="11" style="fill:rgb(255, 245, 221)">collapse<title> Word: collapse
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(283,42)" font-size="11" style="fill:rgb(255, 198, 147)">three<title> Word: three
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(162,110)" font-size="11" style="fill:rgb(67, 114, 255)">occasions<title> Word: occasions
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(189,347)" font-size="11" style="fill:rgb(34, 0, 0)">elections<title> Word: elections
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(394,236) rotate(-90)" font-size="11" style="fill:rgb(0, 0, 77)">conference<title> Word: conference
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(391,398) rotate(-90)" font-size="11" style="fill:rgb(255, 255, 255)">lodge<title> Word: lodge
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(192,239)" font-size="11" style="fill:rgb(25, 56, 255)">statements<title> Word: statements
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(339,347)" font-size="11" style="fill:rgb(0, 0, 241)">addition<title> Word: addition
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(336,262)" font-size="11" style="fill:rgb(0, 0, 227)">wait<title> Word: wait
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(60,301)" font-size="11" style="fill:rgb(31, 65, 255)">directly<title> Word: directly
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(63,371)" font-size="11" style="fill:rgb(0, 0, 208)">ho<title> Word: ho
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(301,346)" font-size="11" style="fill:rgb(108, 161, 255)">chi<title> Word: chi
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(218,385)" font-size="11" style="fill:rgb(147, 0, 0)">bombing<title> Word: bombing
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(129,296)" font-size="11" style="fill:rgb(31, 65, 255)">search<title> Word: search
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(62,240)" font-size="11" style="fill:rgb(129, 182, 255)">threatened<title> Word: threatened
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(27,167) rotate(-90)" font-size="11" style="fill:rgb(255, 228, 188)">assume<title> Word: assume
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(320,58)" font-size="11" style="fill:rgb(0, 0, 129)">primary<title> Word: primary
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(395,126) rotate(-90)" font-size="11" style="fill:rgb(0, 0, 250)">casualties<title> Word: casualties
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(240,194)" font-size="11" style="fill:rgb(22, 0, 0)">chosen<title> Word: chosen
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(31,338)" font-size="11" style="fill:rgb(0, 0, 198)">lose<title> Word: lose
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(29,261) rotate(-90)" font-size="11" style="fill:rgb(255, 101, 57)">woodrow<title> Word: woodrow
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(178,299)" font-size="11" style="fill:rgb(230, 249, 255)">wilson<title> Word: wilson
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(221,391)" font-size="11" style="fill:rgb(185, 226, 255)">mans<title> Word: mans
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(248,347)" font-size="11" style="fill:rgb(19, 0, 0)">mankind<title> Word: mankind
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(371,294) rotate(-90)" font-size="11" style="fill:rgb(136, 0, 0)">wanting<title> Word: wanting
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(36,328) rotate(-90)" font-size="11" style="fill:rgb(238, 251, 255)">rhetoric<title> Word: rhetoric
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(120,173)" font-size="10" style="fill:rgb(34, 0, 0)">believed<title> Word: believed
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(241,147)" font-size="10" style="fill:rgb(244, 0, 0)">resolve<title> Word: resolve
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(292,117)" font-size="10" style="fill:rgb(178, 0, 0)">retreat<title> Word: retreat
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(49,173)" font-size="10" style="fill:rgb(255, 185, 133)">bold<title> Word: bold
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(319,301)" font-size="10" style="fill:rgb(0, 0, 77)">ashamed<title> Word: ashamed
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(344,372)" font-size="10" style="fill:rgb(0, 0, 8)">agenda<title> Word: agenda
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(258,86)" font-size="10" style="fill:rgb(31, 0, 0)">rise<title> Word: rise
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(71,80)" font-size="10" style="fill:rgb(0, 0, 0)">massive<title> Word: massive
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(360,118) rotate(-90)" font-size="10" style="fill:rgb(255, 188, 136)">returned<title> Word: returned
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(42,132)" font-size="10" style="fill:rgb(255, 88, 47)">cut<title> Word: cut
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(328,173) rotate(-90)" font-size="10" style="fill:rgb(133, 0, 0)">protect<title> Word: protect
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(25,39)" font-size="9" style="fill:rgb(8, 28, 255)">recession<title> Word: recession
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(390,332) rotate(-90)" font-size="9" style="fill:rgb(91, 0, 0)">price<title> Word: price
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(329,229) rotate(-90)" font-size="9" style="fill:rgb(205, 0, 0)">taxpayer<title> Word: taxpayer
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(330,102) rotate(-90)" font-size="9" style="fill:rgb(255, 188, 136)">supplies<title> Word: supplies
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(210,8)" font-size="8" style="fill:rgb(217, 244, 255)">delivered<title> Word: delivered
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(342,47)" font-size="8" style="fill:rgb(230, 0, 0)">oil<title> Word: oil
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(221,102)" font-size="7" style="fill:rgb(255, 172, 119)">legislation<title> Word: legislation
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(59,221)" font-size="7" style="fill:rgb(126, 179, 255)">urge<title> Word: urge
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(33,163) rotate(-90)" font-size="7" style="fill:rgb(198, 234, 255)">authorities<title> Word: authorities
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(132,347)" font-size="7" style="fill:rgb(136, 0, 0)">moving<title> Word: moving
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(180,198)" font-size="7" style="fill:rgb(255, 201, 150)">levels<title> Word: levels
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(194,79)" font-size="7" style="fill:rgb(0, 0, 250)">maintained<title> Word: maintained
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(282,82)" font-size="7" style="fill:rgb(119, 0, 0)">committee<title> Word: committee
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(150,38)" font-size="6" style="fill:rgb(0, 0, 57)">investigations<title> Word: investigations
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(64,288)" font-size="6" style="fill:rgb(255, 24, 5)">investigation<title> Word: investigation
+Occurrences: 3
+Weight: 1.099</title></text>
+<text transform="translate(224,293)" font-size="5" style="fill:rgb(241, 252, 255)">mate<title> Word: mate
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(160,242) rotate(-90)" font-size="5" style="fill:rgb(73, 0, 0)">she<title> Word: she
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(236,395)" font-size="5" style="fill:rgb(31, 65, 255)">republican<title> Word: republican
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(314,291)" font-size="5" style="fill:rgb(0, 0, 70)">unite<title> Word: unite
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(228,282)" font-size="5" style="fill:rgb(0, 0, 101)">die<title> Word: die
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(90,269)" font-size="5" style="fill:rgb(255, 195, 143)">forgotten<title> Word: forgotten
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(85,141)" font-size="5" style="fill:rgb(0, 0, 0)">non<title> Word: non
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(179,305)" font-size="5" style="fill:rgb(0, 0, 5)">factories<title> Word: factories
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(46,213)" font-size="5" style="fill:rgb(0, 0, 77)">businesses<title> Word: businesses
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(173,5)" font-size="5" style="fill:rgb(0, 0, 53)">forget<title> Word: forget
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(56,196)" font-size="5" style="fill:rgb(50, 92, 255)">tied<title> Word: tied
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(340,267)" font-size="5" style="fill:rgb(0, 9, 255)">travel<title> Word: travel
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(122,21)" font-size="5" style="fill:rgb(255, 88, 47)">thats<title> Word: thats
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(343,305)" font-size="5" style="fill:rgb(60, 0, 0)">dont<title> Word: dont
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(78,345)" font-size="5" style="fill:rgb(236, 0, 0)">failure<title> Word: failure
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(5,395)" font-size="5" style="fill:rgb(192, 0, 0)">reappraisal<title> Word: reappraisal
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(47,395)" font-size="5" style="fill:rgb(195, 232, 255)">objective<title> Word: objective
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(217,39)" font-size="5" style="fill:rgb(67, 114, 255)">belligerent<title> Word: belligerent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(62,305)" font-size="5" style="fill:rgb(255, 134, 84)">experience<title> Word: experience
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(292,139)" font-size="5" style="fill:rgb(11, 0, 0)">shining<title> Word: shining
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(114,38)" font-size="5" style="fill:rgb(255, 217, 171)">example<title> Word: example
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(158,183)" font-size="5" style="fill:rgb(143, 195, 255)">treated<title> Word: treated
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(143,124)" font-size="5" style="fill:rgb(255, 179, 126)">dissent<title> Word: dissent
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(375,250)" font-size="5" style="fill:rgb(255, 255, 255)">courts<title> Word: courts
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(307,306)" font-size="5" style="fill:rgb(255, 138, 87)">civil<title> Word: civil
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(21,173)" font-size="5" style="fill:rgb(154, 203, 255)">peddlers<title> Word: peddlers
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(2,371)" font-size="5" style="fill:rgb(255, 79, 41)">wave<title> Word: wave
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(128,237)" font-size="5" style="fill:rgb(0, 0, 31)">alive<title> Word: alive
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(180,268)" font-size="5" style="fill:rgb(0, 0, 0)">battlefront<title> Word: battlefront
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(59,268)" font-size="5" style="fill:rgb(115, 0, 0)">schedule<title> Word: schedule
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(126,79)" font-size="5" style="fill:rgb(217, 0, 0)">nixons<title> Word: nixons
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(36,136)" font-size="5" style="fill:rgb(255, 222, 178)">takeover<title> Word: takeover
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(359,161) rotate(-90)" font-size="5" style="fill:rgb(241, 0, 0)">critical<title> Word: critical
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(2,336)" font-size="5" style="fill:rgb(0, 0, 252)">disaster<title> Word: disaster
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(291,158)" font-size="5" style="fill:rgb(238, 251, 255)">died<title> Word: died
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(131,70)" font-size="5" style="fill:rgb(0, 0, 22)">hue<title> Word: hue
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(172,345)" font-size="5" style="fill:rgb(255, 248, 227)">death<title> Word: death
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(166,159)" font-size="5" style="fill:rgb(255, 230, 192)">carrying<title> Word: carrying
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(3,25)" font-size="5" style="fill:rgb(0, 0, 126)">opinion<title> Word: opinion
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(125,266)" font-size="5" style="fill:rgb(217, 0, 0)">expressed<title> Word: expressed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(229,305)" font-size="5" style="fill:rgb(255, 217, 171)">wherever<title> Word: wherever
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(135,142)" font-size="5" style="fill:rgb(0, 0, 230)">rejected<title> Word: rejected
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(275,198)" font-size="5" style="fill:rgb(0, 0, 136)">immediately<title> Word: immediately
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(335,243)" font-size="5" style="fill:rgb(208, 0, 0)">speech<title> Word: speech
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(365,328) rotate(-90)" font-size="5" style="fill:rgb(0, 0, 255)">offered<title> Word: offered
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(243,334)" font-size="5" style="fill:rgb(0, 0, 192)">outside<title> Word: outside
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(364,351)" font-size="5" style="fill:rgb(255, 238, 205)">supervision<title> Word: supervision
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(241,59)" font-size="5" style="fill:rgb(0, 0, 41)">pledged<title> Word: pledged
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(161,238)" font-size="5" style="fill:rgb(44, 83, 255)">except<title> Word: except
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(250,37)" font-size="5" style="fill:rgb(73, 122, 255)">meetings<title> Word: meetings
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(383,34)" font-size="5" style="fill:rgb(3, 0, 0)">hanoi<title> Word: hanoi
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(336,249)" font-size="5" style="fill:rgb(0, 0, 126)">bitter<title> Word: bitter
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(370,5)" font-size="5" style="fill:rgb(133, 185, 255)">hanois<title> Word: hanois
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(237,198)" font-size="5" style="fill:rgb(67, 114, 255)">secretary<title> Word: secretary
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(319,6)" font-size="4" style="fill:rgb(0, 0, 17)">representatives<title> Word: representatives
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(396,306) rotate(-90)" font-size="4" style="fill:rgb(147, 198, 255)">assistance<title> Word: assistance
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(167,340) rotate(-90)" font-size="4" style="fill:rgb(255, 101, 57)">convinced<title> Word: convinced
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(51,232)" font-size="4" style="fill:rgb(31, 65, 255)">minh<title> Word: minh
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(111,106)" font-size="4" style="fill:rgb(57, 101, 255)">letter<title> Word: letter
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(7,30)" font-size="4" style="fill:rgb(255, 244, 217)">channels<title> Word: channels
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(350,378)" font-size="4" style="fill:rgb(0, 0, 105)">table<title> Word: table
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(300,96)" font-size="4" style="fill:rgb(108, 161, 255)">brave<title> Word: brave
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(367,125)" font-size="4" style="fill:rgb(255, 249, 230)">sides<title> Word: sides
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(292,60)" font-size="4" style="fill:rgb(161, 209, 255)">secret<title> Word: secret
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(245,321)" font-size="4" style="fill:rgb(122, 0, 0)">obstacle<title> Word: obstacle
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(256,306)" font-size="4" style="fill:rgb(0, 0, 47)">concession<title> Word: concession
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(294,121)" font-size="4" style="fill:rgb(101, 154, 255)">described<title> Word: described
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(215,56)" font-size="4" style="fill:rgb(255, 179, 126)">guam<title> Word: guam
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(65,144)" font-size="4" style="fill:rgb(3, 0, 0)">july<title> Word: july
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(141,114)" font-size="4" style="fill:rgb(0, 0, 230)">trying<title> Word: trying
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(283,305)" font-size="4" style="fill:rgb(28, 61, 255)">wise<title> Word: wise
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(124,301)" font-size="4" style="fill:rgb(0, 0, 147)">survival<title> Word: survival
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(249,151)" font-size="4" style="fill:rgb(247, 253, 255)">significantly<title> Word: significantly
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(193,243)" font-size="4" style="fill:rgb(0, 0, 143)">vietnamization<title> Word: vietnamization
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(56,329)" font-size="4" style="fill:rgb(238, 251, 255)">visit<title> Word: visit
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(321,122)" font-size="4" style="fill:rgb(136, 0, 0)">orders<title> Word: orders
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(242,78)" font-size="4" style="fill:rgb(233, 0, 0)">withdrawn<title> Word: withdrawn
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(154,188)" font-size="4" style="fill:rgb(255, 0, 0)">developments<title> Word: developments
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(30,193)" font-size="4" style="fill:rgb(205, 238, 255)">stronger<title> Word: stronger
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(331,103)" font-size="4" style="fill:rgb(255, 0, 0)">fixed<title> Word: fixed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(320,43)" font-size="4" style="fill:rgb(0, 0, 8)">factors<title> Word: factors
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(25,316) rotate(-90)" font-size="4" style="fill:rgb(0, 0, 0)">activity<title> Word: activity
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(263,65)" font-size="4" style="fill:rgb(47, 0, 0)">june<title> Word: june
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(259,93)" font-size="4" style="fill:rgb(255, 236, 202)">optimistic<title> Word: optimistic
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(300,67)" font-size="4" style="fill:rgb(175, 0, 0)">estimates<title> Word: estimates
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(263,279)" font-size="4" style="fill:rgb(255, 101, 57)">along<title> Word: along
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(365,108) rotate(-90)" font-size="4" style="fill:rgb(255, 226, 185)">allowed<title> Word: allowed
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(152,7)" font-size="4" style="fill:rgb(255, 255, 255)">minority<title> Word: minority
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(123,307)" font-size="4" style="fill:rgb(255, 122, 73)">horizons<title> Word: horizons
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(222,132)" font-size="4" style="fill:rgb(0, 0, 0)">goods<title> Word: goods
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(58,105)" font-size="4" style="fill:rgb(140, 192, 255)">moon<title> Word: moon
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(28,375)" font-size="4" style="fill:rgb(91, 0, 0)">goodness<title> Word: goodness
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(95,143)" font-size="4" style="fill:rgb(17, 42, 255)">suffered<title> Word: suffered
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(195,252)" font-size="4" style="fill:rgb(0, 0, 87)">angry<title> Word: angry
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(341,63)" font-size="4" style="fill:rgb(0, 0, 44)">hatreds<title> Word: hatreds
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(112,29)" font-size="4" style="fill:rgb(211, 0, 0)">catch<title> Word: catch
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(110,292)" font-size="4" style="fill:rgb(230, 0, 0)">reaches<title> Word: reaches
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(218,270)" font-size="4" style="fill:rgb(0, 0, 244)">neighbor<title> Word: neighbor
+Occurrences: 2
+Weight: 1.099</title></text>
+<text transform="translate(128,207)" font-size="4" style="fill:rgb(25, 56, 255)">humanity<title> Word: humanity
+Occurrences: 2
+Weight: 1.099</title></text>
+</svg>
+</div>
+
+<script>
+    document.getElementById("triangle").style.display = "block";
+    document.getElementById("circle").style.display = "none";
+    document.getElementById("square").style.display = "none";
+    //document.getElementById("square").style.display = "none";
+  
+    function myFunction(c) 
+    {
+    document.getElementById("triangle").style.display = "none";
+    document.getElementById("circle").style.display = "none";
+    document.getElementById("square").style.display = "none";
+    document.getElementById(c).style.display = "block";
+    }
+</script>
+</body>
+</html>
     
