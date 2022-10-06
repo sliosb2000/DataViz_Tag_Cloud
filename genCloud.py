@@ -15,11 +15,20 @@ def wordcloud_gen(folder):  # This is the Head function of the whole project
     counts = get_word_counts(folder, processor)  # gets the words from the documents within the folder
     filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)  # finds freq of said words
     info = wordcloud_svg_gen(filteredWords)  # creates the SVG of the word cloud
+<<<<<<< Updated upstream
     #info = svg_tooltip_gen(info, filteredWords)  # modifies the SVG info to add tooltip data # Obscolete, the svg is build in html_builder()
     html_name = "index" + ".html"  # gives html file output name
     f = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
     # html_builder(f, info)  # enters html info into opened file
     f.close()
+=======
+    aaa = svg_edit(info,counts)
+    return aaa
+    # html_name = folder + ".html"  # gives html file output name
+    # html_file = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
+    # html_builder(html_file, aaa, counts)  # enters html info into opened file
+    # html_file.close()
+>>>>>>> Stashed changes
 
 
 def get_word_counts(directory, tokenProcessor):
@@ -79,19 +88,28 @@ def wordcloud_svg_gen(text):
     info = wordcloud_svg
     return info
 
+def svg_edit(svg_file, wordData):
+    open("temp_svg.svg","w").write(svg_file) #there probably is a be a better idea, smoother
+    read = open("temp_svg.svg","r")
+    write_svg = ""
 
-def svg_tooltip_gen(data, dictionary):
-    for word in dictionary:
-        print(word)
-        # https://www.w3schools.com/python/ref_string_replace.asp
-        # We need to find the term in the html file and replace it
-        # if word is in data:
-        #   replace word with word + <title>word.key</title>
-        pass
-    return data
+    for line in read:
+        word =line.split(">")[1].split("<")[0]
+        if len(word)>1 and len(word)<72:      #to ignore the first three lines and empty ones
+            s = word+"<title> Word: "+word+"\nOccurrences: "+str(wordData[word].frequency)+"\nWeight: "\
+                +str(round(wordData[word].weight, 3))+"</title>"
+            li = line.replace(word,s)
+            write_svg+=li
+        else:
+            write_svg += line
+    
+    return write_svg
 
-
+<<<<<<< Updated upstream
 def html_builder(file, svg_file, svg_file1, svg_file2):
+=======
+def html_builder(file, svg_file):
+>>>>>>> Stashed changes
     Top = """
     <html>
         <head>
@@ -143,6 +161,7 @@ def html_builder(file, svg_file, svg_file1, svg_file2):
 </body>
 </html>
     """
+<<<<<<< Updated upstream
     svg_list = [svg_file,svg_file1,svg_file2]
     for x in svg_list:
         open("temp_svg.svg","w").write(x) #there probably is a be a better idea, smoother
@@ -183,3 +202,28 @@ Kennedy = wordcloud_gen('Kennedy')
 Nixon = wordcloud_gen('nixon')
 Eisenhower = wordcloud_gen('Eisenhower')
 html_builder("index.html", Kennedy, Nixon, Eisenhower)  # enters html info into opened file
+=======
+    aaa = svg_file
+    # aaa = svg_edit(svg_file, wordData)
+    # open("temp_svg.svg","w").write(svg_file) #there probably is a be a better idea, smoother
+    
+    # read = open("temp_svg.svg","r")
+    # write_svg = ""
+    # for line in read:
+    #     word =line.split(">")[1].split("<")[0]
+    #     if len(word)>1 and len(word)<72:      #to ignore the first three lines and empty ones
+    #         s = word+"<title> Word: "+word+"\nOccurrences: "+str(wordData[word].frequency)+"\nWeight: "\
+    #             +str(round(wordData[word].weight, 3))+"</title>"
+    #         li = line.replace(word,s)
+    #         write_svg+=li
+    #     else:
+    #         write_svg += line
+    
+    file.write(Top + aaa + Bottom)
+
+
+processor = BasicWordProcessor()
+fff=wordcloud_gen('nixon')
+html_file = open("html_name.html", 'w')
+html_builder(html_file, fff)
+>>>>>>> Stashed changes
