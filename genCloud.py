@@ -53,7 +53,7 @@ def get_word_counts(directory, tokenProcessor):
 
     # Debug printing
     for key in wordsAndFrequencies:
-        print(key + '\taa')
+        print(key + '\t')
         print(wordsAndFrequencies.get(key))
 
     return wordsAndFrequencies
