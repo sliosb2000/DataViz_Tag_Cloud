@@ -193,6 +193,6 @@ def html_builder(file, eis, ken, nix):
 processor = BasicWordProcessor()
 nixon=wordcloud_gen('nixon')
 esien=wordcloud_gen('eisenhower')
-kenne=wordcloud_gen('speeches')
+kenne=wordcloud_gen('Speeches')
 html_file = open("index.html", 'w')
 html_builder(html_file, esien,kenne,nixon)
