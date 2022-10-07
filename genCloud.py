@@ -72,7 +72,7 @@ def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWei
 def wordcloud_svg_gen(text):
     # generates the word cloud with arguments
     wordcloud = WordCloud(
-        background_color='white', max_font_size=90, min_word_length=3, width=800, height=800, colormap="coolwarm",
+        background_color='white', max_font_size=120, min_word_length=3, width=900, height=850, colormap="rainbow",
     ).generate_from_frequencies(text)
     # Creates SVG file
     wordcloud_svg = wordcloud.to_svg(embed_font=True)
