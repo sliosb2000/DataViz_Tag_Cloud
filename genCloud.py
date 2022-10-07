@@ -11,8 +11,6 @@ from basicWordProcessor import BasicWordProcessor
 # inputText: An unstructured text file.
 # tokenProcessor: Used to process a token into an acceptable format.
 # return: A dictionary(word, frequenciesAndScores).
-# TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
-#  their counts.
 def wordcloud_gen(folder):  # This is the Head function of the whole project
     counts, numDocs = get_word_counts(folder, processor)  # gets the words from the documents within the folder
     #Lowest possible weight is always 0.
@@ -28,10 +26,6 @@ def wordcloud_gen(folder):  # This is the Head function of the whole project
     info = wordcloud_svg_gen(filteredWords)  # creates the SVG of the word cloud
     aaa = svg_edit(info, counts)
     return aaa
-    # html_name = folder + ".html"  # gives html file output name
-    # html_file = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
-    # html_builder(html_file, aaa, counts)  # enters html info into opened file
-    # html_file.close()
 
 
 def get_word_counts(directory, tokenProcessor):
@@ -185,21 +179,6 @@ def html_builder(file, eis, ken, nix):
 </body>
 </html>
     """
-    # aaa = svg_file
-    # aaa = svg_edit(svg_file, wordData)
-    # open("temp_svg.svg","w").write(svg_file) #there probably is a be a better idea, smoother
-    
-    # read = open("temp_svg.svg","r")
-    # write_svg = ""
-    # for line in read:
-    #     word =line.split(">")[1].split("<")[0]
-    #     if len(word)>1 and len(word)<72:      #to ignore the first three lines and empty ones
-    #         s = word+"<title> Word: "+word+"\nOccurrences: "+str(wordData[word].frequency)+"\nWeight: "\
-    #             +str(round(wordData[word].weight, 3))+"</title>"
-    #         li = line.replace(word,s)
-    #         write_svg+=li
-    #     else:
-    #         write_svg += line
     
     file.write(Top + eis + mid1 + ken + mid2 + nix + Bottom)
 
