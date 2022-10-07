@@ -1,3 +1,5 @@
+import math
+
 import frequenciesAndScores
 import os
 from os import path
@@ -12,10 +14,19 @@ from basicWordProcessor import BasicWordProcessor
 # TODO: Hopefully get this to work with multiple documents, merging the dictionaries that pop out and updating
 #  their counts.
 def wordcloud_gen(folder):  # This is the Head function of the whole project
-    counts = get_word_counts(folder, processor)  # gets the words from the documents within the folder
-    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, 1.0)  # finds freq of said words
+    counts, numDocs = get_word_counts(folder, processor)  # gets the words from the documents within the folder
+    #Lowest possible weight is always 0.
+    print("\nPlease input desired filter level:\n"
+          "MINIMUM 0.00 to MAXIMUM " + str(math.trunc(find_max_weight(counts))))
+
+    chosenFilter = float(input("\nFilter: "))
+    if(chosenFilter < 0 or chosenFilter >= round(math.log(numDocs))):
+        print("Invalid filter chosen, defaulting to value of 0.00")
+        chosenFilter = 0
+
+    filteredWords = get_words_and_frequencies_dictionary_above_weight(counts, chosenFilter)  # finds freq of said words
     info = wordcloud_svg_gen(filteredWords)  # creates the SVG of the word cloud
-    aaa = svg_edit(info,counts)
+    aaa = svg_edit(info, counts)
     return aaa
     # html_name = folder + ".html"  # gives html file output name
     # html_file = open(html_name, 'w')  # opens a new/exiting html doc and allows writing
@@ -52,12 +63,7 @@ def get_word_counts(directory, tokenProcessor):
     for key in wordsAndFrequencies:
         wordsAndFrequencies[key].update_weight(totalDocs)
 
-    # Debug printing
-    for key in wordsAndFrequencies:
-        print(key + '\t')
-        print(wordsAndFrequencies.get(key))
-
-    return wordsAndFrequencies
+    return wordsAndFrequencies, totalDocs
 
 
 def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWeight):
@@ -67,6 +73,14 @@ def get_words_and_frequencies_dictionary_above_weight(wordsAndWeights, targetWei
             wordsAndCounts[word] = wordsAndWeights.get(word).frequency
 
     return wordsAndCounts
+
+def find_max_weight(wordData):
+    weights = []
+    for word in wordData:
+        if not(weights.__contains__(wordData.get(word).weight)):
+            weights.append(wordData.get(word).weight)
+
+    return max(weights)
 
 
 def wordcloud_svg_gen(text):
